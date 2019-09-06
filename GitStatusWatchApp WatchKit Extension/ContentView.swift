@@ -10,8 +10,12 @@ import SwiftUI
 
 struct ContentView : View {
     var body: some View {
-        Text("Hello World")
-    }
+        List {
+            Text("Charmander")
+            Text("Squirtle")
+            Text("Bulbasaur")
+            Text("Pikachu")
+        }    }
 }
 
 #if DEBUG
