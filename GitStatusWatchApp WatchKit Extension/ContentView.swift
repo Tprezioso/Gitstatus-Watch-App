@@ -11,11 +11,30 @@ import SwiftUI
 struct ContentView : View {
     var body: some View {
         List {
-            Text("Charmander")
+            VStack(alignment: .leading){
+                Text("Charmander")
+                
+                Text("Type: fire")
+                    .font(.footnote)
+            }
+
             Text("Squirtle")
             Text("Bulbasaur")
             Text("Pikachu")
-        }    }
+        }
+        .navigationBarTitle(Text("GitHub Status"))
+    }
+}
+
+struct GitHubStatus {
+    var body: some View {
+        VStack(alignment: .leading){
+            Text("Charmander")
+            Text("Type: fire")
+        }
+
+    }
+    
 }
 
 #if DEBUG
