@@ -19,6 +19,7 @@
 		9F0B3EBB232083A400C4DE0B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3EBA232083A400C4DE0B /* ComplicationController.swift */; };
 		9F0B3EBD232083A500C4DE0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B3EBC232083A500C4DE0B /* Assets.xcassets */; };
 		9F0B3EC0232083A500C4DE0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B3EBF232083A500C4DE0B /* Preview Assets.xcassets */; };
+		9F0B3ED12323151600C4DE0B /* GitStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3ED02323151600C4DE0B /* GitStatusModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9F0B3EBF232083A500C4DE0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9F0B3EC1232083A500C4DE0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F0B3EC2232083A500C4DE0B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		9F0B3ED02323151600C4DE0B /* GitStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitStatusModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,12 +127,10 @@
 		9F0B3EAF232083A400C4DE0B /* GitStatusWatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				9F0B3EB0232083A400C4DE0B /* ContentView.swift */,
-				9F0B3EB2232083A400C4DE0B /* HostingController.swift */,
 				9F0B3EB4232083A400C4DE0B /* ExtensionDelegate.swift */,
-				9F0B3EB6232083A400C4DE0B /* NotificationController.swift */,
-				9F0B3EB8232083A400C4DE0B /* NotificationView.swift */,
-				9F0B3EBA232083A400C4DE0B /* ComplicationController.swift */,
+				9F0B3ED22323152200C4DE0B /* Model */,
+				9F0B3ED32323153900C4DE0B /* View */,
+				9F0B3ED42323154D00C4DE0B /* Controller */,
 				9F0B3EBC232083A500C4DE0B /* Assets.xcassets */,
 				9F0B3EC1232083A500C4DE0B /* Info.plist */,
 				9F0B3EC2232083A500C4DE0B /* PushNotificationPayload.apns */,
@@ -145,6 +145,33 @@
 				9F0B3EBF232083A500C4DE0B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F0B3ED22323152200C4DE0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B3ED02323151600C4DE0B /* GitStatusModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F0B3ED32323153900C4DE0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B3EB0232083A400C4DE0B /* ContentView.swift */,
+				9F0B3EB8232083A400C4DE0B /* NotificationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9F0B3ED42323154D00C4DE0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B3EB2232083A400C4DE0B /* HostingController.swift */,
+				9F0B3EB6232083A400C4DE0B /* NotificationController.swift */,
+				9F0B3EBA232083A400C4DE0B /* ComplicationController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F0B3EB3232083A400C4DE0B /* HostingController.swift in Sources */,
+				9F0B3ED12323151600C4DE0B /* GitStatusModel.swift in Sources */,
 				9F0B3EB1232083A400C4DE0B /* ContentView.swift in Sources */,
 				9F0B3EB7232083A400C4DE0B /* NotificationController.swift in Sources */,
 				9F0B3EB5232083A400C4DE0B /* ExtensionDelegate.swift in Sources */,
