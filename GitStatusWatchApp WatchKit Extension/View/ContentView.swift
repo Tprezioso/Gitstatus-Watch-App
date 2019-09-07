@@ -25,24 +25,8 @@ struct ContentView : View {
             HStack {
                 Text(pokemon.name)
                 Text(pokemon.status)
-
             }
-            
-        
-        
-        //        List {
-//            VStack(alignment: .leading){
-//                Text("Charmander")
-//                Text("Type: fire")
-//                    .font(.footnote)
-//            }
-//
-//            Text("Squirtle")
-//            Text("Bulbasaur")
-//            Text("Pikachu")
-//            Text("Mewtwo")
-//            Text("Mew")
-//            Text("Jiggly Puff")
+
         }
         .navigationBarTitle(Text("GitHub Status"))
     }
