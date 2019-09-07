@@ -9,18 +9,40 @@
 import SwiftUI
 
 struct ContentView : View {
+    
+    var pokemomnList = [
+        GitStatusObject(name: "Tom", status: "good"),
+        GitStatusObject(name: "Me", status: "good"),
+        GitStatusObject(name: "You", status: "bad"),
+        GitStatusObject(name: "Tom", status: "good"),
+        GitStatusObject(name: "Me", status: "good"),
+        GitStatusObject(name: "You", status: "bad")
+    ]
+    
     var body: some View {
-        List {
-            VStack(alignment: .leading){
-                Text("Charmander")
-                
-                Text("Type: fire")
-                    .font(.footnote)
-            }
 
-            Text("Squirtle")
-            Text("Bulbasaur")
-            Text("Pikachu")
+        List(pokemomnList.identified(by:\.name)) { pokemon in
+            HStack {
+                Text(pokemon.name)
+                Text(pokemon.status)
+
+            }
+            
+        
+        
+        //        List {
+//            VStack(alignment: .leading){
+//                Text("Charmander")
+//                Text("Type: fire")
+//                    .font(.footnote)
+//            }
+//
+//            Text("Squirtle")
+//            Text("Bulbasaur")
+//            Text("Pikachu")
+//            Text("Mewtwo")
+//            Text("Mew")
+//            Text("Jiggly Puff")
         }
         .navigationBarTitle(Text("GitHub Status"))
     }
@@ -31,8 +53,8 @@ struct GitHubStatus {
         VStack(alignment: .leading){
             Text("Charmander")
             Text("Type: fire")
+                .font(.footnote)
         }
-
     }
     
 }

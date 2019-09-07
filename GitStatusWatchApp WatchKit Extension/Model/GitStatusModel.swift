@@ -11,4 +11,5 @@ import Foundation
 struct GitStatusObject {
     var name: String
     var status: String
+
 }
