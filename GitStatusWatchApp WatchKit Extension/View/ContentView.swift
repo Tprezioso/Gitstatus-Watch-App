@@ -18,9 +18,8 @@ struct ContentView : View {
         GitStatusObject(name: "Me", status: "good"),
         GitStatusObject(name: "You", status: "bad")
     ]
-    
-    var body: some View {
 
+    var body: some View {
         List(pokemomnList.identified(by:\.name)) { pokemon in
             HStack {
                 Text(pokemon.name)
@@ -29,16 +28,18 @@ struct ContentView : View {
 
         }
         .navigationBarTitle(Text("GitHub Status"))
+            .onAppear(perform: {
+                self.fetch()
+            }) 
     }
-}
-
-struct GitHubStatus {
-    var body: some View {
-        VStack(alignment: .leading){
-            Text("Charmander")
-            Text("Type: fire")
-                .font(.footnote)
+    
+    
+    
+    private func fetch() {
+        APICALL().summaryStatus { (json) in
+            print(json!)
         }
+
     }
     
 }
