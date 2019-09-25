@@ -23,8 +23,6 @@ class APICALL {
                     print(componentsData[1]["name"]!)
                     print(componentsData[1]["status"]!)
                 }
-                
-                
             }
             
             if response.result.isFailure{
@@ -32,6 +30,19 @@ class APICALL {
             }
         }
         
+    }
+    
+    func apiCall() {
+        let urlString = statusSummaryForGitHub
+        guard let requestUrl = URL(string:urlString) else { return }
+        let request = URLRequest(url:requestUrl)
+        let task = URLSession.shared.dataTask(with: request) {
+            (data, response, error) in
+            if error == nil,let usableData = data {
+                print(usableData) //JSONSerialization
+            }
+        }
+        task.resume()
     }
 
 }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView : View {
     
+    var api = APICALL()
     var pokemomnList = [
         GitStatusObject(name: "Tom", status: "good"),
         GitStatusObject(name: "Me", status: "good"),
@@ -20,7 +21,8 @@ struct ContentView : View {
     ]
 
     var body: some View {
-        List(pokemomnList.identified(by:\.name)) { pokemon in
+        //identified(by:\.name)
+        List(pokemomnList, id: \.name) { pokemon in
             HStack {
                 Text(pokemon.name)
                 Text(pokemon.status)
@@ -36,10 +38,10 @@ struct ContentView : View {
     
     
     private func fetch() {
-        APICALL().summaryStatus { (json) in
-            print(json!)
+        self.api.summaryStatus { (json) in
+//            print(json ?? ">>>>>>>>DID NOTHING!!!<<<<<<<<<<<")
         }
-
+        
     }
     
 }
