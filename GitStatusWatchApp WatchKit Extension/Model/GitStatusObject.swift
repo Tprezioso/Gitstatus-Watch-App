@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GitStatusObject {
+struct GitStatusObject: Codable, Identifiable {
     var name: String
     var status: String
 
