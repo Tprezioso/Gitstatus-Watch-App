@@ -13,26 +13,20 @@ struct ContentView : View {
     var api = APICALL()
     var apiJSON = [[String: Any]]()
     
-    var pokemomnList = [
-        GitStatusObject(name: "Tom", status: "good"),
-        GitStatusObject(name: "Me", status: "good"),
-        GitStatusObject(name: "You", status: "bad"),
-        GitStatusObject(name: "Tom", status: "good"),
-        GitStatusObject(name: "Me", status: "good"),
-        GitStatusObject(name: "You", status: "bad")
-    ]
-
+    @ObservedObject var statusList = StatusListViewModel()
+    
     var body: some View {
-        List(pokemomnList, id: \.name) { pokemon in
-            HStack {
-                Text(pokemon.name)
-                Text(pokemon.status)
+        
+        ScrollView {
+            ForEach(statusList.array) { status in
+                Text(status.name)
+                Text(status.status)
             }
-
+//               print(statusList as! String)
         }
         .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
-                self.fetch()
+                self.statusList.fetchStatus()
             }) 
     }
     
@@ -40,7 +34,7 @@ struct ContentView : View {
     
     private func fetch() {
         self.api.summaryStatus { (json) in
-            
+
         }
         
     }

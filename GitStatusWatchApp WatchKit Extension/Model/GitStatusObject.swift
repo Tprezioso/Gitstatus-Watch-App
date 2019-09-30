@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct GitStatusObject: Codable, Identifiable {
+struct GitStatusObject:Identifiable, Decodable {
+    let id = UUID()
     var name: String
     var status: String
 
