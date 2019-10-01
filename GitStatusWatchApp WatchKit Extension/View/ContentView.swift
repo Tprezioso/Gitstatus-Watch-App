@@ -17,26 +17,23 @@ struct ContentView : View {
     
     var body: some View {
         
-        ScrollView {
+        List {
             ForEach(statusList.array) { status in
-                Text(status.name)
-                Text(status.status)
+                VStack {
+                    Text(status.name)
+                    .lineLimit(0)
+//                        .font(.title)
+                    Text(status.status)
+//                        .font(.subheadline)
+                }
             }
-//               print(statusList as! String)
+
         }
+
         .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
                 self.statusList.fetchStatus()
             }) 
-    }
-    
-    
-    
-    private func fetch() {
-        self.api.summaryStatus { (json) in
-
-        }
-        
     }
     
 }
