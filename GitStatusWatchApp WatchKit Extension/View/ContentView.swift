@@ -19,12 +19,13 @@ struct ContentView : View {
         
         List {
             ForEach(statusList.array) { status in
-                VStack {
+                VStack(alignment: .leading, spacing: 1) {
                     Text(status.name)
                     Text(status.status)
                         .padding()
+
                 }
-            .padding()
+//            .padding()
             }
 
         }

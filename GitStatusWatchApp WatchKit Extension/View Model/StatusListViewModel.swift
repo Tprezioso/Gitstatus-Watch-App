@@ -20,18 +20,27 @@ class StatusListViewModel: ObservableObject {
      func fetchStatus() {
         APICALL().summaryStatus { (json) in
             self.apiJSON = json! as [[String : Any]]
-
             for components in self.apiJSON {
                 if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
                     self.status = GitStatusObject(name: "", status: "")
                     self.status.name = components["name"] as! String
                     self.status.status = components["status"] as! String
+                    self.status.status.capitalizeFirstLetter()
                     self.array.append(self.status)
                 }
             }
         print(self.array)
-
         }
     }
 
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
 }
