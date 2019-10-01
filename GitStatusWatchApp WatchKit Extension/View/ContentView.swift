@@ -10,9 +10,6 @@ import SwiftUI
 
 struct ContentView : View {
     
-    var api = APICALL()
-    var apiJSON = [[String: Any]]()
-    
     @ObservedObject var statusList = StatusListViewModel()
     
     var body: some View {
@@ -20,16 +17,13 @@ struct ContentView : View {
         List {
             ForEach(statusList.array) { status in
                 VStack(alignment: .leading, spacing: 1) {
-                    Text(status.name)
+                    Text("\(status.name):")
                     Text(status.status)
                         .padding()
-
                 }
-//            .padding()
+            .padding()
             }
-
         }
-
         .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
                 self.statusList.fetchStatus()
