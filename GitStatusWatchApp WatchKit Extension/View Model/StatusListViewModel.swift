@@ -22,13 +22,15 @@ class StatusListViewModel: ObservableObject {
             self.apiJSON = json! as [[String : Any]]
 
             for components in self.apiJSON {
-                self.status = GitStatusObject(name: "", status: "")
-                if components["name"] as! String != "Visit www.githubstatus.com for more information"{
+                if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
+                    self.status = GitStatusObject(name: "", status: "")
                     self.status.name = components["name"] as! String
                     self.status.status = components["status"] as! String
+                    self.array.append(self.status)
                 }
-                self.array.append(self.status)
             }
+        print(self.array)
+
         }
     }
 

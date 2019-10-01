@@ -21,11 +21,10 @@ struct ContentView : View {
             ForEach(statusList.array) { status in
                 VStack {
                     Text(status.name)
-                    .lineLimit(0)
-//                        .font(.title)
                     Text(status.status)
-//                        .font(.subheadline)
+                        .padding()
                 }
+            .padding()
             }
 
         }
