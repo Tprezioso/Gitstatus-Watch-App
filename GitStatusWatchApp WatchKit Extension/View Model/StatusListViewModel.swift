@@ -29,7 +29,6 @@ class StatusListViewModel: ObservableObject {
                     self.array.append(self.status)
                 }
             }
-        print(self.array)
         }
     }
 

@@ -13,7 +13,6 @@ struct ContentView : View {
     @ObservedObject var statusList = StatusListViewModel()
     
     var body: some View {
-        
         List {
             ForEach(statusList.array) { status in
                 VStack(alignment: .leading, spacing: 1) {

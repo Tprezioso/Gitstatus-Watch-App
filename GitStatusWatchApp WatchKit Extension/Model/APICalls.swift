@@ -20,8 +20,6 @@ class APICALL {
                 
                 if let componentsData = statusData["components"] as? [[String : Any]] {
                     completion(componentsData)
-                    print(componentsData[1]["name"]!)
-                    print(componentsData[1]["status"]!)
                 }
             }
             if response.result.isFailure{
