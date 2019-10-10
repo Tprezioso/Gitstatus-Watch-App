@@ -17,12 +17,17 @@ struct ContentView : View {
             ForEach(statusList.array) { status in
                 VStack(alignment: .leading, spacing: 1) {
                     Text("\(status.name):")
+                        .multilineTextAlignment(.leading)
+
                     Text(status.status)
-                        .padding()
-                }
-            .padding()
+                        .multilineTextAlignment(.leading)
+                        .padding(.top)
+                    
+                    }
+                .padding()
             }
         }
+        .listStyle(CarouselListStyle())
         .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
                 self.statusList.fetchStatus()
