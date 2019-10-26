@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView : View {
     
     @ObservedObject var statusList = StatusListViewModel()
+    // TODO: - Work on incedents section within APICall
+    // - Also work on changing from list view to Vstack with styling
     
     var body: some View {
         List () {
