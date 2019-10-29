@@ -10,14 +10,46 @@ import Foundation
 import Alamofire
 
 class APICALL {
-    let statusSummaryForGitHub = "https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json"
+    let statusSummaryURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json"
+    let incidentURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/incidents.json"
+    let upcomingScheduledMaintenancesURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/scheduled-maintenances/upcoming.json"
+    
     typealias WebServiceResponse = ([[String: Any]]?) -> Void
     
     func summaryStatus(completion: @escaping WebServiceResponse) {
-        Alamofire.request(statusSummaryForGitHub, method: .get).responseJSON { (response) in
+        Alamofire.request(statusSummaryURL, method: .get).responseJSON { (response) in
             if response.result.isSuccess {
                 let statusData = response.result.value! as! [String: AnyObject]
-                
+                if let componentsData = statusData["components"] as? [[String : Any]] {
+                    completion(componentsData)
+                }
+            }
+            if response.result.isFailure{
+                print(response.result.error!)
+            }
+        }
+    }
+
+    // TODO: - Need to work out how to get data from request below
+    
+    func lastIncident(completion: @escaping WebServiceResponse) {
+        Alamofire.request(incidentURL, method: .get).responseJSON { (response) in
+            if response.result.isSuccess {
+                let statusData = response.result.value! as! [String: AnyObject]
+                if let componentsData = statusData["components"] as? [[String : Any]] {
+                    completion(componentsData)
+                }
+            }
+            if response.result.isFailure{
+                print(response.result.error!)
+            }
+        }
+    }
+
+    func maintenancesStatus(completion: @escaping WebServiceResponse) {
+        Alamofire.request(upcomingScheduledMaintenancesURL, method: .get).responseJSON { (response) in
+            if response.result.isSuccess {
+                let statusData = response.result.value! as! [String: AnyObject]
                 if let componentsData = statusData["components"] as? [[String : Any]] {
                     completion(componentsData)
                 }
