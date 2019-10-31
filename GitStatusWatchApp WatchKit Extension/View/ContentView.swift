@@ -15,18 +15,19 @@ struct ContentView : View {
     // - Also work on changing from list view to Vstack with styling
     
     var body: some View {
-        List () {
+        ScrollView (.vertical) {
+            VStack(alignment: .leading, spacing: 1) {
             ForEach(statusList.array) { status in
-                VStack(alignment: .leading, spacing: 1) {
                     Text("\(status.name):")
-                        .multilineTextAlignment(.leading)
-
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
                     Text(status.status)
-                        .multilineTextAlignment(.leading)
-                        .padding(.top)
+                        .lineLimit(2)
+//                        .multilineTextAlignment(.leading)
+//                        .padding(.top)
                     
                     }
-                .padding()
+            .padding()
             }
         }
         .listStyle(CarouselListStyle())
