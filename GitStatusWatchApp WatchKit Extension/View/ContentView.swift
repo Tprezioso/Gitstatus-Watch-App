@@ -23,9 +23,6 @@ struct ContentView : View {
                         .fixedSize(horizontal: false, vertical: true)
                     Text(status.status)
                         .lineLimit(2)
-//                        .multilineTextAlignment(.leading)
-//                        .padding(.top)
-                    
                     }
             .padding()
             }
