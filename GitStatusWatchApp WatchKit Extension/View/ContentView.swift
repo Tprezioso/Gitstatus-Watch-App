@@ -17,23 +17,26 @@ struct ContentView : View {
     var body: some View {
         ScrollView (.vertical) {
             VStack(alignment: .leading, spacing: 1) {
-            ForEach(statusList.array) { status in
-                    Text("\(status.name):")
-                        .lineLimit(nil)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text(status.status)
-                        .lineLimit(2)
+                ForEach(statusList.array) { status in
+                    Button(action: {}){
+                        Text("\(status.name): \n\(status.status)")
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding()
                     }
-            .padding()
+                    .disabled(true)
+                }
+                    
+                .padding()
             }
         }
         .listStyle(CarouselListStyle())
         .navigationBarTitle(Text("GitHub Status"))
-            .onAppear(perform: {
-                self.statusList.fetchStatus()
-            }) 
+        .onAppear(perform: {
+            self.statusList.fetchStatus()
+        })
     }
-    
 }
 
 #if DEBUG
