@@ -23,12 +23,12 @@ struct ContentView : View {
                             .multilineTextAlignment(.leading)
                             .lineLimit(nil)
                             .fixedSize(horizontal: false, vertical: true)
-                            .padding()
+                            .padding(20)
                     }
                     .disabled(true)
                 }
                     
-                .padding()
+                .padding(.bottom)
             }
         }
         .listStyle(CarouselListStyle())
