@@ -16,11 +16,11 @@ struct ContentView : View {
     
     var body: some View {
         ScrollView (.vertical) {
-            VStack(alignment: .leading, spacing: 1) {
-                ForEach(statusList.array) { status in
+            ForEach(statusList.array) { status in
+                VStack {
                     Button(action: {}){
                         Text("\(status.name): \n\(status.status)")
-                            .multilineTextAlignment(.leading)
+//                            .multilineTextAlignment(.leading)
                             .lineLimit(nil)
                             .fixedSize(horizontal: false, vertical: true)
                             .padding(20)
