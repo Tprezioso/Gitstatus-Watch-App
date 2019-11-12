@@ -13,22 +13,25 @@ struct ContentView : View {
     @ObservedObject var statusList = StatusListViewModel()
     // TODO: - Work on incedents section within APICall
     // - Also work on changing from list view to Vstack with styling
-    
+    // Maybe try Group
+
     var body: some View {
-        ScrollView (.vertical) {
-            VStack(alignment: .leading, spacing: 1) {
+        //ScrollView mpt working as of right now
+        List {
+//            VStack(alignment: .leading) {
                 ForEach(statusList.array) { status in
                     Button(action: {}){
                         Text("\(status.name): \n\(status.status)")
                             .multilineTextAlignment(.leading)
-                            .lineLimit(nil)
-                            .fixedSize(horizontal: false, vertical: true)
+//                            .lineLimit(nil)
+//                            .fixedSize(horizontal: false, vertical: true)
                             .padding(20)
-                    }
-                    .disabled(true)
-                }
                     
-                .padding(.bottom)
+                    }
+//                    .disabled(true)
+//                }
+                    
+//                .padding(.bottom)
             }
         }
         .listStyle(CarouselListStyle())
