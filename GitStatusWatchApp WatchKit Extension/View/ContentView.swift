@@ -16,6 +16,7 @@ struct ContentView : View {
     // Maybe try Group
 
     var body: some View {
+<<<<<<< HEAD
         //ScrollView mpt working as of right now
         List {
 //            VStack(alignment: .leading) {
@@ -25,6 +26,16 @@ struct ContentView : View {
                             .multilineTextAlignment(.leading)
 //                            .lineLimit(nil)
 //                            .fixedSize(horizontal: false, vertical: true)
+=======
+        ScrollView (.vertical) {
+            ForEach(statusList.array) { status in
+                VStack {
+                    Button(action: {}){
+                        Text("\(status.name): \n\(status.status)")
+//                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+>>>>>>> 5d8d985048280aa89e14ba5276fceac2dab34072
                             .padding(20)
                     
                     }
