@@ -16,31 +16,19 @@ struct ContentView : View {
     // Maybe try Group
 
     var body: some View {
-        //ScrollView mpt working as of right now
         List {
-//            VStack(alignment: .leading) {
-                ForEach(statusList.array) { status in
-                    Button(action: {}){
-                        Text("\(status.name): \n\(status.status)")
+            ForEach(statusList.array) { status in
+//                Button(action: {}){
+                VStack(alignment: .leading) {
+                    Text("\(status.name):")
                             .multilineTextAlignment(.leading)
-//                            .lineLimit(nil)
-//                            .fixedSize(horizontal: false, vertical: true)
-//        ScrollView (.vertical) {
-//            ForEach(statusList.array) { status in
-//                VStack {
-//                    Button(action: {}){
-//                        Text("\(status.name): \n\(status.status)")
-////                            .multilineTextAlignment(.leading)
-//                            .lineLimit(nil)
-//                            .fixedSize(horizontal: false, vertical: true)
-//>>>>>>> 5d8d985048280aa89e14ba5276fceac2dab34072
-                            .padding(20)
+                    Spacer()
+                    Text(status.status)
+                }
+                .padding(20)
+
                     
-                    }
-//                    .disabled(true)
 //                }
-                    
-//                .padding(.bottom)
             }
         }
         .listStyle(CarouselListStyle())

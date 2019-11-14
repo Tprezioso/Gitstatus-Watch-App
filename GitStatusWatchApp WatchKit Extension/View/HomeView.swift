@@ -14,11 +14,13 @@ struct HomeView: View {
             NavigationLink(destination: ContentView()) {
                 Text("Status")
             }
-                NavigationLink(destination: Text("1")) {
-                    Text("Incidents")
-                }
+            NavigationLink(destination: IncidentView()) {
+                Text("Incidents")
+            }
         }
+        .navigationBarTitle(Text("GitHub Status"))
     }
+    
 }
 
 struct HomeView_Previews: PreviewProvider {
