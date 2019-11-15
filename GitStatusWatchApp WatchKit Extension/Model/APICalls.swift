@@ -36,7 +36,8 @@ class APICALL {
         Alamofire.request(incidentURL, method: .get).responseJSON { (response) in
             if response.result.isSuccess {
                 let statusData = response.result.value! as! [String: AnyObject]
-                if let componentsData = statusData["components"] as? [[String : Any]] {
+                if let componentsData = statusData["incidents"] as? [[String : Any]] {
+//                    print(componentsData[0])
                     completion(componentsData)
                 }
             }
