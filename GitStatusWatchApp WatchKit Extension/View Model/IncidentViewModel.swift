@@ -21,13 +21,13 @@ class IncidentViewModel: ObservableObject {
         APICALL().summaryStatus { (json) in
             self.apiJSON = json! as [[String : Any]]
             for response in self.apiJSON {
-                self.incident.name = response["name"] as! String
-                self.incident.dateCreated = response["created_at"] as! String
-                self.incident.impact = response["status"] as! String
+//                self.incident.name = response["name"] as! String
+//                self.incident.dateCreated = response["created_at"] as! String
+//                self.incident.impact = response["status"] as! String
 //                self.incident.body = response["description"] as! String
-
-                self.array.append(self.incident)
-                print(self.array)
+//
+//                self.array.append(self.incident)
+                print(response)
             }
         }
     }

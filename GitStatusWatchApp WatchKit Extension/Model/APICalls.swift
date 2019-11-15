@@ -11,7 +11,7 @@ import Alamofire
 
 class APICALL {
     let statusSummaryURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json"
-    let incidentURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/incidents.json"
+    let incidentURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/incidents/unresolved.json"
     let upcomingScheduledMaintenancesURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/scheduled-maintenances/upcoming.json"
     
     typealias WebServiceResponse = ([[String: Any]]?) -> Void

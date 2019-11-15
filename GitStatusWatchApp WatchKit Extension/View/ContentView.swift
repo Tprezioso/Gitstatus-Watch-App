@@ -12,9 +12,6 @@ struct ContentView : View {
     
     @ObservedObject var statusList = StatusListViewModel()
     @ObservedObject var incidentList = IncidentViewModel()
-    // TODO: - Work on incedents section within APICall
-    // - Also work on changing from list view to Vstack with styling
-    // Maybe try Group
 
     var body: some View {
         List {
