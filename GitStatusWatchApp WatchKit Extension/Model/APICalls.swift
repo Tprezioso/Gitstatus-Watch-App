@@ -11,7 +11,7 @@ import Alamofire
 
 class APICALL {
     let statusSummaryURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json"
-    let incidentURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/incidents/unresolved.json"
+    let incidentURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/incidents.json"
     let upcomingScheduledMaintenancesURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/scheduled-maintenances/upcoming.json"
     
     typealias WebServiceResponse = ([[String: Any]]?) -> Void
@@ -35,9 +35,8 @@ class APICALL {
     func lastIncident(completion: @escaping WebServiceResponse) {
         Alamofire.request(incidentURL, method: .get).responseJSON { (response) in
             if response.result.isSuccess {
-                let statusData = response.result.value! as! [String: AnyObject]
-                if let componentsData = statusData["incidents"] as? [[String : Any]] {
-//                    print(componentsData[0])
+                let incidentData = response.result.value! as! [String: AnyObject]
+                if let componentsData = incidentData["incidents"] as? [[String : Any]] {
                     completion(componentsData)
                 }
             }

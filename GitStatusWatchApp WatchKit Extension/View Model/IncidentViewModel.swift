@@ -18,17 +18,17 @@ class IncidentViewModel: ObservableObject {
     var apiJSON = [[String : Any]]()
    
      func fetchStatus() {
-        APICALL().summaryStatus { (json) in
+        APICALL().lastIncident { (json) in
             self.apiJSON = json! as [[String : Any]]
-            for response in self.apiJSON {
-//                self.incident.name = response["name"] as! String
-//                self.incident.dateCreated = response["created_at"] as! String
-//                self.incident.impact = response["status"] as! String
-//                self.incident.body = response["description"] as! String
-//
-//                self.array.append(self.incident)
-                print(response)
-            }
+//            for response in self.apiJSON {
+            self.incident.name = self.apiJSON[0]["name"] as! String
+                self.incident.dateCreated = self.apiJSON[0]["created_at"] as! String
+                self.incident.impact = self.apiJSON[0]["impact"] as? String ?? "No impact"
+//            self.incident.body = self.apiJSON[0]["incident_updates"][0]["body"] as! String ?? "No Body"
+
+                self.array.append(self.incident)
+                print(self.array)
+//            }
         }
     }
     
