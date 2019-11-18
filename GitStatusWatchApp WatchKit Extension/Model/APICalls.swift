@@ -29,8 +29,6 @@ class APICALL {
             }
         }
     }
-
-    // TODO: - Need to work out how to get data from request below
     
     func lastIncident(completion: @escaping WebServiceResponse) {
         Alamofire.request(incidentURL, method: .get).responseJSON { (response) in
@@ -46,18 +44,18 @@ class APICALL {
         }
     }
 
-    func maintenancesStatus(completion: @escaping WebServiceResponse) {
-        Alamofire.request(upcomingScheduledMaintenancesURL, method: .get).responseJSON { (response) in
-            if response.result.isSuccess {
-                let statusData = response.result.value! as! [String: AnyObject]
-                if let componentsData = statusData["components"] as? [[String : Any]] {
-                    completion(componentsData)
-                }
-            }
-            if response.result.isFailure{
-                print(response.result.error!)
-            }
-        }
-    }
+//    func maintenancesStatus(completion: @escaping WebServiceResponse) {
+//        Alamofire.request(upcomingScheduledMaintenancesURL, method: .get).responseJSON { (response) in
+//            if response.result.isSuccess {
+//                let statusData = response.result.value! as! [String: AnyObject]
+//                if let componentsData = statusData["components"] as? [[String : Any]] {
+//                    completion(componentsData)
+//                }
+//            }
+//            if response.result.isFailure{
+//                print(response.result.error!)
+//            }
+//        }
+//    }
 
 }
