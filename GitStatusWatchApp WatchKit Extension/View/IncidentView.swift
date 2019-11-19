@@ -12,7 +12,21 @@ struct IncidentView: View {
     @ObservedObject var incidentList = IncidentViewModel()
 
     var body: some View {
-        Text(incidentList.incident.name)
+        VStack (alignment: .leading) {
+            Text("Last Incident")
+                .font(.headline)
+            Text(incidentList.incident.dateCreated)
+            Spacer()
+            Text(incidentList.incident.name)
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer()
+            HStack {
+                Text("Impact:")
+                Text(incidentList.incident.impact)
+            }
+//            Text(incidentList.incident.body)
+        }
             .onAppear(perform: {
                 self.incidentList.fetchStatus()
             })
