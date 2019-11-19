@@ -18,6 +18,7 @@ class StatusListViewModel: ObservableObject {
     var apiJSON = [[String : Any]]()
    
      func fetchStatus() {
+        self.array = [GitStatusObject]()
         APICALL().summaryStatus { (json) in
             self.apiJSON = json! as [[String : Any]]
             for components in self.apiJSON {
