@@ -27,7 +27,7 @@ class IncidentViewModel: ObservableObject {
 //            self.incident.body = self.apiJSON[0]["incident_updates"][0]["body"] as! String ?? "No Body"
 
                 self.array.append(self.incident)
-                print(self.array)
+                print(self.incident)
 //            }
         }
     }

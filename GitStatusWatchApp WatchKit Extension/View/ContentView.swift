@@ -11,8 +11,6 @@ import SwiftUI
 struct ContentView : View {
     
     @ObservedObject var statusList = StatusListViewModel()
-    @ObservedObject var incidentList = IncidentViewModel()
-
     var body: some View {
         List {
             ForEach(statusList.array) { status in
@@ -33,8 +31,6 @@ struct ContentView : View {
         .navigationBarTitle(Text("GitHub Status"))
         .onAppear(perform: {
             self.statusList.fetchStatus()
-            self.incidentList.fetchStatus()
-
         })
     }
 }

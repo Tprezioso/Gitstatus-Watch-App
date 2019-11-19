@@ -9,9 +9,15 @@
 import SwiftUI
 
 struct IncidentView: View {
+    @ObservedObject var incidentList = IncidentViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(incidentList.incident.name)
+            .onAppear(perform: {
+                self.incidentList.fetchStatus()
+            })
     }
+    
 }
 
 struct IncidentView_Previews: PreviewProvider {
