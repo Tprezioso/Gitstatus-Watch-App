@@ -24,10 +24,13 @@ class IncidentViewModel: ObservableObject {
             self.incident.name = self.apiJSON[0]["name"] as! String
                 self.incident.dateCreated = self.apiJSON[0]["created_at"] as! String
                 self.incident.impact = self.apiJSON[0]["impact"] as? String ?? "No impact"
-//            self.incident.body = self.apiJSON[0]["incident_updates"][0]["body"] as! String ?? "No Body"
+            if let detailArray = self.apiJSON[0]["incident_updates"] as? [[String:Any]] {
+                self.incident.body = detailArray[0]["body"] as! String
+                print(detailArray[0]["body"]!)
+            }
 
                 self.array.append(self.incident)
-                print(self.incident)
+//            print(self.apiJSON[0]["incident_updates"]!)
 //            }
         }
     }
