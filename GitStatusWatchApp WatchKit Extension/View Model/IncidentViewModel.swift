@@ -24,6 +24,7 @@ class IncidentViewModel: ObservableObject {
             self.incident.dateCreated = self.formatDate(date: self.apiJSON[0]["created_at"] as! String)
             
             self.incident.impact = self.apiJSON[0]["impact"] as? String ?? "No impact"
+            self.incident.impact.capitalizeFirstLetter()
             if let detailArray = self.apiJSON[0]["incident_updates"] as? [[String:Any]] {
                 self.incident.body = detailArray[0]["body"] as! String
                 print(detailArray[0]["body"]!)

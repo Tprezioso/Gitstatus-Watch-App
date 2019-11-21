@@ -19,6 +19,8 @@ struct IncidentView: View {
                 Text(incidentList.incident.dateCreated)
                 Spacer()
                 Text(incidentList.incident.name)
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
                     .lineLimit(nil)
                     .fixedSize(horizontal: false, vertical: true)
                 Spacer()
@@ -27,7 +29,7 @@ struct IncidentView: View {
                         .font(.headline)
                     Text(incidentList.incident.impact)
                 }
-                Text("Details:")
+                Text("Status:")
                     .font(.headline)
                 Text(incidentList.incident.body)
                     .lineLimit(nil)
