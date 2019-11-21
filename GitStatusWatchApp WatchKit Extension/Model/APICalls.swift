@@ -44,18 +44,18 @@ class APICALL {
         }
     }
 
-//    func maintenancesStatus(completion: @escaping WebServiceResponse) {
-//        Alamofire.request(upcomingScheduledMaintenancesURL, method: .get).responseJSON { (response) in
-//            if response.result.isSuccess {
-//                let statusData = response.result.value! as! [String: AnyObject]
-//                if let componentsData = statusData["components"] as? [[String : Any]] {
-//                    completion(componentsData)
-//                }
-//            }
-//            if response.result.isFailure{
-//                print(response.result.error!)
-//            }
-//        }
-//    }
+    func upcomingMaintenancesStatus(completion: @escaping WebServiceResponse) {
+        Alamofire.request(upcomingScheduledMaintenancesURL, method: .get).responseJSON { (response) in
+            if response.result.isSuccess {
+                let maintaenancesData = response.result.value! as! [String: AnyObject]
+                if let componentsData = maintaenancesData["scheduled_maintenances"] as? [[String : Any]] {
+                    completion(componentsData)
+                }
+            }
+            if response.result.isFailure{
+                print(response.result.error!)
+            }
+        }
+    }
 
 }

@@ -14,6 +14,7 @@ class IncidentViewModel: ObservableObject {
     
     @Published var incident = GitIncidentsObject(name: "", dateCreated: "", impact: "", body: "")
     @Published var array = [GitIncidentsObject]()
+    var dateConverter = HelperMethods()
     
     var apiJSON = [[String : Any]]()
     
@@ -21,7 +22,7 @@ class IncidentViewModel: ObservableObject {
         APICALL().lastIncident { (json) in
             self.apiJSON = json! as [[String : Any]]
             self.incident.name = self.apiJSON[0]["name"] as! String
-            self.incident.dateCreated = self.formatDate(date: self.apiJSON[0]["created_at"] as! String)
+            self.incident.dateCreated = self.dateConverter.formatDate(date: self.apiJSON[0]["created_at"] as! String)
             
             self.incident.impact = self.apiJSON[0]["impact"] as? String ?? "No impact"
             self.incident.impact.capitalizeFirstLetter()
@@ -32,20 +33,6 @@ class IncidentViewModel: ObservableObject {
             
             self.array.append(self.incident)
         }
-    }
-    
-    func formatDate(date: String) -> String {
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        //    dateFormatter.locale = Locale(identifier: "en_US") //uncomment if you don't want to get the system default format.
-        
-        let dateObj: Date? = dateFormatterGet.date(from: date)
-        
-        return dateFormatter.string(from: dateObj!)
     }
     
 }
