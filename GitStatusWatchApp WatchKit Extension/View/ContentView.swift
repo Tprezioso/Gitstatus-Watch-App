@@ -14,7 +14,6 @@ struct ContentView : View {
     var body: some View {
         List {
             ForEach(statusList.array) { status in
-//                Button(action: {}){
                 VStack(alignment: .leading) {
                     Text("\(status.name):")
                             .multilineTextAlignment(.leading)
@@ -22,9 +21,6 @@ struct ContentView : View {
                     Text(status.status)
                 }
                 .padding(20)
-
-                    
-//                }
             }
         }
         .listStyle(CarouselListStyle())

@@ -17,6 +17,9 @@ struct HomeView: View {
             NavigationLink(destination: IncidentView()) {
                 Text("Last Incident")
             }
+            NavigationLink(destination: UpcomingMaintenancesView()) {
+                Text("Schedule Maintenance")
+            }
         }
         .navigationBarTitle(Text("GitHub Status"))
     }
