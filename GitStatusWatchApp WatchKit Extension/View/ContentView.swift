@@ -16,7 +16,9 @@ struct ContentView : View {
             ForEach(statusList.array) { status in
                 VStack(alignment: .leading) {
                     Text("\(status.name):")
+                        .fontWeight(.heavy)
                             .multilineTextAlignment(.leading)
+                            
                     Spacer()
                     Text(status.status)
                 }
