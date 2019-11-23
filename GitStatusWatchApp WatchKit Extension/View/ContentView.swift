@@ -11,25 +11,31 @@ import SwiftUI
 struct ContentView : View {
     
     @ObservedObject var statusList = StatusListViewModel()
+    
     var body: some View {
-        List {
-            ForEach(statusList.array) { status in
-                VStack(alignment: .leading) {
-                    Text("\(status.name):")
-                        .fontWeight(.heavy)
-                            .multilineTextAlignment(.leading)
-                            
-                    Spacer()
-                    Text(status.status)
+        ZStack {
+            Text("Loading...")
+            List {
+                    ForEach(statusList.array) { status in
+
+                        VStack(alignment: .leading) {
+                            Text("\(status.name):")
+                                .fontWeight(.heavy)
+                                    .multilineTextAlignment(.leading)
+                                    
+                            Spacer()
+                            Text(status.status)
+                        }
+                        .padding(20)
+                    }
+    //                self.showHud.toggle()
                 }
-                .padding(20)
-            }
+                .listStyle(CarouselListStyle())
+                .navigationBarTitle(Text("GitHub Status"))
+                .onAppear(perform: {
+                    self.statusList.fetchStatus()
+            })
         }
-        .listStyle(CarouselListStyle())
-        .navigationBarTitle(Text("GitHub Status"))
-        .onAppear(perform: {
-            self.statusList.fetchStatus()
-        })
     }
 }
 
