@@ -33,7 +33,6 @@ struct MaintenaceView: View {
                 .font(.system(size: 25))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-            
             Text(maintenance.scheduledMaintenance.name)
                 .font(.headline)
                 .multilineTextAlignment(.center)
