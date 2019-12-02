@@ -16,6 +16,10 @@ struct ContentView : View {
     var body: some View {
         ZStack {
             List {
+                if statusList.array.isEmpty{
+                    Text("No internet Connection")
+                    .padding()
+                }
                 ForEach(statusList.array) { status in
                     VStack(alignment: .leading) {
                         Text("\(status.name):")
@@ -33,10 +37,8 @@ struct ContentView : View {
             .onAppear(perform: {
                 self.statusList.fetchStatus()
 //                self.spinCircle.toggle()
-
             })
 
-//            LoadView()
         }
     }
 }

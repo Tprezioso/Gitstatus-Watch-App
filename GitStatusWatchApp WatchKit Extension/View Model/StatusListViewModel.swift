@@ -20,15 +20,20 @@ class StatusListViewModel: ObservableObject {
      func fetchStatus() {
         self.array = [GitStatusObject]()
         APICALL().summaryStatus { (json) in
-            self.apiJSON = json! as [[String : Any]]
-            for components in self.apiJSON {
-                if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
-                    self.status = GitStatusObject(name: "", status: "")
-                    self.status.name = components["name"] as! String
-                    self.status.status = components["status"] as! String
-                    self.status.status.capitalizeFirstLetter()
-                    self.array.append(self.status)
+            if json!.isEmpty {
+                self.status.name = "No Internet"
+            } else {
+                self.apiJSON = json! as [[String : Any]]
+                for components in self.apiJSON {
+                    if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
+                        self.status = GitStatusObject(name: "", status: "")
+                        self.status.name = components["name"] as! String
+                        self.status.status = components["status"] as! String
+                        self.status.status.capitalizeFirstLetter()
+                        self.array.append(self.status)
+                    }
                 }
+
             }
         }
     }

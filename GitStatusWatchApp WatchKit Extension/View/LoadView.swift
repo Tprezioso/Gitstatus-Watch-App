@@ -7,12 +7,11 @@
 //
 
 import SwiftUI
+import Combine
 
 struct LoadView: View {
     @State var spinCircle = true
-    @State var hideLoading = false
     
-
     var body: some View {
         Circle()
             .trim(from: 0.5, to: 1)

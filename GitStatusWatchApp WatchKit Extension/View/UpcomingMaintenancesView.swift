@@ -33,6 +33,11 @@ struct MaintenaceView: View {
                 .font(.system(size: 25))
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
+            
+            if maintenance.scheduledMaintenance.name.isEmpty {
+                Text("No Internet Connection")
+                    .font(.headline)
+            }
             Text(maintenance.scheduledMaintenance.name)
                 .font(.headline)
                 .multilineTextAlignment(.center)
