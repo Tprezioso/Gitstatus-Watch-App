@@ -13,11 +13,8 @@ struct ContentView : View {
     
     @ObservedObject var statusList = StatusListViewModel()
     
-    @State var spinCircle = true
-    @State var hideLoading = false
-    
     var body: some View {
-//        ZStack {
+        ZStack {
             List {
                 ForEach(statusList.array) { status in
                     VStack(alignment: .leading) {
@@ -35,22 +32,12 @@ struct ContentView : View {
             .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
                 self.statusList.fetchStatus()
-                self.spinCircle.toggle()
+//                self.spinCircle.toggle()
 
             })
 
-//            Circle()
-//                .trim(from: 0.5, to: 1)
-//                .stroke(Color.blue, lineWidth:4)
-//                .frame(width:100)
-//                .rotationEffect(.degrees(spinCircle ? 0 : -360), anchor: .center)
-//                .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
-//                .onAppear(perform: {
-//                    self.statusList.fetchStatus()
-//                    self.spinCircle.toggle()
-//
-//                })
-//        }
+//            LoadView()
+        }
     }
 }
 

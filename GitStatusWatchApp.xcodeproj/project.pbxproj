@@ -31,6 +31,7 @@
 		9F3E7CE0233D83B200CE8FA6 /* StatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7CDF233D83B200CE8FA6 /* StatusListViewModel.swift */; };
 		9F4C7620237B0765004DB6A1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C761F237B0765004DB6A1 /* HomeView.swift */; };
 		9F4C7622237B3673004DB6A1 /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C7621237B3673004DB6A1 /* IncidentView.swift */; };
+		9F7120012395CA2C00F8E510 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7120002395CA2C00F8E510 /* LoadView.swift */; };
 		A41CEA7E4104AFB335CA2BF5 /* libPods-GitStatusWatchApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BEBF9960707A120143DB52 /* libPods-GitStatusWatchApp.a */; };
 		BA9EE75CC196ED409C81E5D7 /* Pods_GitStatusWatchApp_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B70F7BFA4336EC51412F5E7 /* Pods_GitStatusWatchApp_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		9F3E7CDF233D83B200CE8FA6 /* StatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusListViewModel.swift; sourceTree = "<group>"; };
 		9F4C761F237B0765004DB6A1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9F4C7621237B3673004DB6A1 /* IncidentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentView.swift; sourceTree = "<group>"; };
+		9F7120002395CA2C00F8E510 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		F172325F182B1FD9E6EE8FA2 /* Pods-GitStatusWatchApp WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusWatchApp WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-GitStatusWatchApp WatchKit App/Pods-GitStatusWatchApp WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		FC5679D9DB87E502D232EE2E /* Pods-GitStatusWatchApp WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusWatchApp WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-GitStatusWatchApp WatchKit App/Pods-GitStatusWatchApp WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +228,7 @@
 			children = (
 				9F4C761F237B0765004DB6A1 /* HomeView.swift */,
 				9F0B3EB0232083A400C4DE0B /* ContentView.swift */,
+				9F7120002395CA2C00F8E510 /* LoadView.swift */,
 				9F4C7621237B3673004DB6A1 /* IncidentView.swift */,
 				9F2751342387497D00BE06E0 /* UpcomingMaintenancesView.swift */,
 				9F0B3EB8232083A400C4DE0B /* NotificationView.swift */,
@@ -503,6 +506,7 @@
 				9F3E7CE0233D83B200CE8FA6 /* StatusListViewModel.swift in Sources */,
 				9F0B3EB5232083A400C4DE0B /* ExtensionDelegate.swift in Sources */,
 				9F0B3EB9232083A400C4DE0B /* NotificationView.swift in Sources */,
+				9F7120012395CA2C00F8E510 /* LoadView.swift in Sources */,
 				9F0B3EBB232083A400C4DE0B /* ComplicationController.swift in Sources */,
 				9F27513923874A3000BE06E0 /* MaintenanceObject.swift in Sources */,
 				9F2751352387497D00BE06E0 /* UpcomingMaintenancesView.swift in Sources */,
