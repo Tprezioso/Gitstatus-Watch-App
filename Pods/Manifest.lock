@@ -1,16 +1,20 @@
 PODS:
-  - Alamofire (4.9.0)
+  - Alamofire (4.9.1)
+  - EMTLoadingIndicator (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - EMTLoadingIndicator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - EMTLoadingIndicator
 
 SPEC CHECKSUMS:
-  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  EMTLoadingIndicator: 84b875fbe500606bb9a5e411885bc152ae9a371f
 
-PODFILE CHECKSUM: 08ad5d73ca3c176b16f9a5ad868f8de8e90f2ede
+PODFILE CHECKSUM: 5623a7cbc73fd19bcf269cc948c8432074854782
 
 COCOAPODS: 1.6.1

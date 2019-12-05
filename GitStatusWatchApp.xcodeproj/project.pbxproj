@@ -22,6 +22,7 @@
 		9F0B3EC0232083A500C4DE0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B3EBF232083A500C4DE0B /* Preview Assets.xcassets */; };
 		9F0B3ED12323151600C4DE0B /* GitStatusObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3ED02323151600C4DE0B /* GitStatusObject.swift */; };
 		9F0B3ED623245D5C00C4DE0B /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3ED523245D5C00C4DE0B /* APICalls.swift */; };
+		9F12290123988AB500FA2FA6 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F12290023988AB500FA2FA6 /* Loader.swift */; };
 		9F27512D237E1B0800BE06E0 /* GitIncidentsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27512C237E1B0800BE06E0 /* GitIncidentsObject.swift */; };
 		9F27512F237E236B00BE06E0 /* IncidentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27512E237E236B00BE06E0 /* IncidentViewModel.swift */; };
 		9F2751352387497D00BE06E0 /* UpcomingMaintenancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2751342387497D00BE06E0 /* UpcomingMaintenancesView.swift */; };
@@ -104,6 +105,7 @@
 		9F0B3EC2232083A500C4DE0B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		9F0B3ED02323151600C4DE0B /* GitStatusObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitStatusObject.swift; sourceTree = "<group>"; };
 		9F0B3ED523245D5C00C4DE0B /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
+		9F12290023988AB500FA2FA6 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		9F27512C237E1B0800BE06E0 /* GitIncidentsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitIncidentsObject.swift; sourceTree = "<group>"; };
 		9F27512E237E236B00BE06E0 /* IncidentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentViewModel.swift; sourceTree = "<group>"; };
 		9F2751342387497D00BE06E0 /* UpcomingMaintenancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMaintenancesView.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				9F4C761F237B0765004DB6A1 /* HomeView.swift */,
 				9F0B3EB0232083A400C4DE0B /* ContentView.swift */,
 				9F7120002395CA2C00F8E510 /* LoadView.swift */,
+				9F12290023988AB500FA2FA6 /* Loader.swift */,
 				9F4C7621237B3673004DB6A1 /* IncidentView.swift */,
 				9F2751342387497D00BE06E0 /* UpcomingMaintenancesView.swift */,
 				9F0B3EB8232083A400C4DE0B /* NotificationView.swift */,
@@ -431,12 +434,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GitStatusWatchApp WatchKit Extension/Pods-GitStatusWatchApp WatchKit Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-framework/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EMTLoadingIndicator/EMTLoadingIndicator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EMTLoadingIndicator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -501,6 +506,7 @@
 				9F4C7620237B0765004DB6A1 /* HomeView.swift in Sources */,
 				9F0B3EB1232083A400C4DE0B /* ContentView.swift in Sources */,
 				9F27512F237E236B00BE06E0 /* IncidentViewModel.swift in Sources */,
+				9F12290123988AB500FA2FA6 /* Loader.swift in Sources */,
 				9F27513B23874BAB00BE06E0 /* HelperMethods.swift in Sources */,
 				9F0B3EB7232083A400C4DE0B /* NotificationController.swift in Sources */,
 				9F3E7CE0233D83B200CE8FA6 /* StatusListViewModel.swift in Sources */,

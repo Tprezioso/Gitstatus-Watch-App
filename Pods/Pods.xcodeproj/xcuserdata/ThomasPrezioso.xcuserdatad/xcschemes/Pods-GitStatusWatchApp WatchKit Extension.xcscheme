@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1120"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C51A565D973B741976854A24BDE039A8"
+               BlueprintIdentifier = "CE6B94069CD4945AE40448516E2E43C0"
                BuildableName = "Pods_GitStatusWatchApp_WatchKit_Extension.framework"
                BlueprintName = "Pods-GitStatusWatchApp WatchKit Extension"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -8,7 +8,27 @@
 
 import SwiftUI
 import UIKit
+import EMTLoadingIndicator
 
+//struct WatchLoader: WKInterfaceObjectRepresentable {
+//    var indicator: EMTLoadingIndicator
+//
+//    func makeWKInterfaceObject(context: WKInterfaceObjectRepresentableContext<WatchLoader>) -> EMTLoadingIndicator {
+//        return EMTLoadingIndicator.init(interfaceController: self, interfaceImage: image!, width: 40, height: 40, style: .line)
+//    }
+//
+//func updateWKInterfaceObject(_ map: WKInterfaceMap, context: WKInterfaceObjectRepresentableContext<WatchLoader>) {
+//    // Update the interface object.
+//    let span = MKCoordinateSpan(latitudeDelta: 0.02,
+//                                longitudeDelta: 0.02)
+//
+//    let region = MKCoordinateRegion(
+//        center: landmark.locationCoordinate,
+//        span: span)
+//
+//    map.setRegion(region)
+//}
+    
 struct ContentView : View {
     
     @ObservedObject var statusList = StatusListViewModel()
@@ -16,10 +36,6 @@ struct ContentView : View {
     var body: some View {
         ZStack {
             List {
-                if statusList.array.isEmpty{
-                    Text("No internet Connection")
-                    .padding()
-                }
                 ForEach(statusList.array) { status in
                     VStack(alignment: .leading) {
                         Text("\(status.name):")
@@ -30,16 +46,21 @@ struct ContentView : View {
                         Text(status.status)
                     }
                     .padding(20)
+
                 }
-            }
+}
+
             .listStyle(CarouselListStyle())
             .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
                 self.statusList.fetchStatus()
-//                self.spinCircle.toggle()
             })
+            
+//            Loader(isAnimating: $statusList.loading)
+            LoadView(spinCircle: self.$statusList.loading)
 
         }
+        
     }
 }
 

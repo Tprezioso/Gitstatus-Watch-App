@@ -10,24 +10,29 @@ import SwiftUI
 import Combine
 
 struct LoadView: View {
-    @State var spinCircle = true
+    
+    @Binding var spinCircle : Bool
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
+        
         Circle()
             .trim(from: 0.5, to: 1)
             .stroke(Color.blue, lineWidth:4)
             .frame(width:100)
+//            .disabled(spinCircle)
             .rotationEffect(.degrees(spinCircle ? 0 : -360), anchor: .center)
             .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
             .onAppear(perform: {
-                self.spinCircle.toggle()
-                
+                self.spinCircle = true
+                self.presentationMode.wrappedValue.dismiss()
             })
     }
 }
 
-struct LoadView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoadView()
-    }
-}
+
+//struct LoadView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoadView(spinCircle: <#Binding<Bool>#>)
+//    }
+//}
