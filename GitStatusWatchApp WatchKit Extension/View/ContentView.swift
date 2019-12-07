@@ -10,27 +10,7 @@ import SwiftUI
 import UIKit
 import EMTLoadingIndicator
 
-//struct WatchLoader: WKInterfaceObjectRepresentable {
-//    var indicator: EMTLoadingIndicator
-//
-//    func makeWKInterfaceObject(context: WKInterfaceObjectRepresentableContext<WatchLoader>) -> EMTLoadingIndicator {
-//        return EMTLoadingIndicator.init(interfaceController: self, interfaceImage: image!, width: 40, height: 40, style: .line)
-//    }
-//
-//func updateWKInterfaceObject(_ map: WKInterfaceMap, context: WKInterfaceObjectRepresentableContext<WatchLoader>) {
-//    // Update the interface object.
-//    let span = MKCoordinateSpan(latitudeDelta: 0.02,
-//                                longitudeDelta: 0.02)
-//
-//    let region = MKCoordinateRegion(
-//        center: landmark.locationCoordinate,
-//        span: span)
-//
-//    map.setRegion(region)
-//}
-    
 struct ContentView : View {
-    
     @ObservedObject var statusList = StatusListViewModel()
     
     var body: some View {
@@ -55,10 +35,9 @@ struct ContentView : View {
             .onAppear(perform: {
                 self.statusList.fetchStatus()
             })
-            
+//     TODO: - Look into seeing if you can use a activity indicator
 //            Loader(isAnimating: $statusList.loading)
-            LoadView(spinCircle: self.$statusList.loading)
-
+//            LoadView(spinCircle: self.$statusList.loading)
         }
         
     }

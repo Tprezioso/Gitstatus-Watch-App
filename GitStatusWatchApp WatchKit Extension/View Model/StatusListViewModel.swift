@@ -14,7 +14,7 @@ class StatusListViewModel: ObservableObject {
   
     @Published var status = GitStatusObject(name: "", status: "")
     @Published var array = [GitStatusObject]()
-    @Published var loading = true
+    @Published var changeColor = true
     var apiJSON = [[String : Any]]()
    
      func fetchStatus() {
@@ -28,12 +28,15 @@ class StatusListViewModel: ObservableObject {
                     if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
                         self.status = GitStatusObject(name: "", status: "")
                         self.status.name = components["name"] as! String
+                        if self.status.status != "Operational" {
+                            self.changeColor = false
+                        }
                         self.status.status = components["status"] as! String
                         self.status.status.capitalizeFirstLetter()
                         self.array.append(self.status)
                     }
                 }
-                self.loading = false
+                self.changeColor = false
 
             }
         }
