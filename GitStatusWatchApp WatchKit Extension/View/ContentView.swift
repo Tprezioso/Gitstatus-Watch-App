@@ -17,18 +17,25 @@ struct ContentView : View {
         ZStack {
             List {
                 ForEach(statusList.array) { status in
-                    VStack(alignment: .leading) {
-                        Text("\(status.name):")
-                            .fontWeight(.heavy)
-                            .multilineTextAlignment(.leading)
-                        
-                        Spacer()
-                        Text(status.status)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("\(status.name):")
+                                .fontWeight(.heavy)
+                                .multilineTextAlignment(.leading)
+                            
+                            Spacer()
+                            Text(status.status)
+                        }
+                        .padding(20)
+                   Circle()
+                    .fill(self.statusList.changeColor ?  Color.red : Color.green)
+                   .frame(width: 15, height: 15)
                     }
-                    .padding(20)
 
                 }
-}
+
+            }
+
 
             .listStyle(CarouselListStyle())
             .navigationBarTitle(Text("GitHub Status"))
