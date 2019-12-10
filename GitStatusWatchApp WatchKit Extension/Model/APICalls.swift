@@ -24,8 +24,9 @@ class APICALL {
                     completion(componentsData)
                 }
             }
-            if response.result.isFailure{
-                print(response.result.error!)
+            if response.result.isFailure {
+                completion([["error":response.result.error!.localizedDescription]] as [[String: Any]])
+                print(response.result.error!.localizedDescription)
             }
         }
     }

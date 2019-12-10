@@ -19,7 +19,7 @@ struct ContentView : View {
                 ForEach(statusList.array) { status in
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("\(status.name):")
+                            Text("\(status.name):" )
                                 .fontWeight(.heavy)
                                 .multilineTextAlignment(.leading)
                             
@@ -27,9 +27,12 @@ struct ContentView : View {
                             Text(status.status)
                         }
                         .padding(20)
-                   Circle()
-                    .fill(self.statusList.changeColor ?  Color.red : Color.green)
-                   .frame(width: 15, height: 15)
+                        if status.name != "No Internet" {
+                            Circle()
+                             .fill(self.statusList.changeColor ?  Color.red : Color.green)
+                            .frame(width: 15, height: 15)
+
+                        }
                     }
 
                 }
