@@ -11,13 +11,13 @@ import SwiftUI
 import Combine
 
 class StatusListViewModel: ObservableObject {
-  
+    
     @Published var status = GitStatusObject(name: "", status: "")
     @Published var array = [GitStatusObject]()
     @Published var changeColor = true
     var apiJSON = [[String : Any]]()
-   
-     func fetchStatus() {
+    
+    func fetchStatus() {
         self.array = [GitStatusObject]()
         APICALL().summaryStatus { (json) in
             if json!.isEmpty {
@@ -37,10 +37,10 @@ class StatusListViewModel: ObservableObject {
                     }
                 }
                 self.array.remove(at: 0)
-
+                
             }
         }
-
+        
         if self.array.isEmpty {
             self.status.name = "No Internet"
             self.status.status = ""
@@ -51,6 +51,6 @@ class StatusListViewModel: ObservableObject {
         }
     }
     
-
+    
 }
 

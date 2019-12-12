@@ -15,7 +15,7 @@ struct UpcomingMaintenancesView: View {
             MaintenaceView()
         }
     }
-
+    
 }
 
 struct UpcomingMaintenancesView_Previews: PreviewProvider {
@@ -26,7 +26,7 @@ struct UpcomingMaintenancesView_Previews: PreviewProvider {
 
 struct MaintenaceView: View {
     @ObservedObject var maintenance = MaintenancesViewModel()
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Maintenance")

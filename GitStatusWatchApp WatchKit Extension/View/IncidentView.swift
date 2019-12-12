@@ -14,42 +14,42 @@ struct IncidentView: View {
     var body: some View {
         ScrollView() {
             VStack (alignment: .leading, spacing: 8) {
-                        Text("Last Incident")
-                            .font(.title)
-                        if incidentList.incident.name.isEmpty {
-                            Text("No Internet Connection")
-                                .font(.headline)
-                        }
-                        Text(incidentList.incident.dateCreated)
-                        Spacer()
-                        Text(incidentList.incident.name)
-                            .font(.headline)
-                            .multilineTextAlignment(.center)
-                            .lineLimit(nil)
-                            .fixedSize(horizontal: false, vertical: true)
-                        Spacer()
-                        HStack {
-                            Text("Impact:")
-                                .font(.headline)
-                            Text(incidentList.incident.impact)
-                        }
-                        Text("Status:")
-                            .font(.headline)
-                        Text(incidentList.incident.body)
-                            .lineLimit(nil)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                        // this frame layout was used to have same spacing as a button
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-                        .padding()
-
+                Text("Last Incident")
+                    .font(.title)
+                if incidentList.incident.name.isEmpty {
+                    Text("No Internet Connection")
+                        .font(.headline)
                 }
-
-                .onAppear(perform: {
-                    self.incidentList.fetchStatus()
-                })
+                Text(incidentList.incident.dateCreated)
+                Spacer()
+                Text(incidentList.incident.name)
+                    .font(.headline)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer()
+                HStack {
+                    Text("Impact:")
+                        .font(.headline)
+                    Text(incidentList.incident.impact)
+                }
+                Text("Status:")
+                    .font(.headline)
+                Text(incidentList.incident.body)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+                // this frame layout was used to have same spacing as a button
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                .padding()
+            
         }
+            
+        .onAppear(perform: {
+            self.incidentList.fetchStatus()
+        })
     }
+}
 
 
 struct IncidentView_Previews: PreviewProvider {

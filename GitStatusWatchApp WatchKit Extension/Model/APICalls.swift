@@ -44,7 +44,7 @@ class APICALL {
             }
         }
     }
-
+    
     func upcomingMaintenancesStatus(completion: @escaping WebServiceResponse) {
         Alamofire.request(upcomingScheduledMaintenancesURL, method: .get).responseJSON { (response) in
             if response.result.isSuccess {
@@ -59,5 +59,5 @@ class APICALL {
             }
         }
     }
-
+    
 }
