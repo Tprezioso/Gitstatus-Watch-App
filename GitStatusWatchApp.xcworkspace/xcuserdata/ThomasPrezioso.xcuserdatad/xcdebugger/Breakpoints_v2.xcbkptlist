@@ -24,5 +24,53 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B23B2F46-F991-4CB1-98D8-D503C2EAA562"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitStatusWatchApp WatchKit Extension/Model/APICalls.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "summaryStatus(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B23B2F46-F991-4CB1-98D8-D503C2EAA562 - 3efec8ac805d9a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitStatusWatchApp_WatchKit_Extension.APICALL.summaryStatus(completion: (Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GitStatusWatchApp WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ThomasPrezioso/Desktop/develop/devProjects/iOSProjects/GitStatusWatchApp/GitStatusWatchApp%20WatchKit%20Extension/Model/APICalls.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "B23B2F46-F991-4CB1-98D8-D503C2EAA562 - be0e592bba7a7463"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in GitStatusWatchApp_WatchKit_Extension.APICALL.summaryStatus(completion: (Swift.Optional&lt;Swift.Array&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "GitStatusWatchApp WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ThomasPrezioso/Desktop/develop/devProjects/iOSProjects/GitStatusWatchApp/GitStatusWatchApp%20WatchKit%20Extension/Model/APICalls.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

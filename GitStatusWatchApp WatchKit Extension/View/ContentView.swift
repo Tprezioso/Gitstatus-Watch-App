@@ -12,6 +12,7 @@ import EMTLoadingIndicator
 
 struct ContentView : View {
     @ObservedObject var statusList = StatusListViewModel()
+    @ObservedObject var isConnected = APICALL()
     
     var body: some View {
         ZStack {
@@ -27,6 +28,7 @@ struct ContentView : View {
                             Text(status.status)
                         }
                         .padding(20)
+
                         if status.name != "No Internet" {
                             Circle()
                                 .fill(self.statusList.changeColor ?  Color.red : Color.green)
@@ -41,6 +43,8 @@ struct ContentView : View {
             .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
                 self.statusList.fetchStatus()
+                print(self.isConnected.isConnectedtotheInternet)
+
             })
         }
     }
