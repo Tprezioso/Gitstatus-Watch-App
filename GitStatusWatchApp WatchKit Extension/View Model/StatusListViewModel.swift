@@ -28,10 +28,10 @@ class StatusListViewModel: ObservableObject {
                     if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
                         self.status = GitStatusObject(name: "", status: "")
                         self.status.name = components["name"] as? String ?? "No Internet"
-                        if self.status.status != "Operational" {
-                            self.changeColor = false
-                        }
                         self.status.status = components["status"] as! String
+                        if self.status.status != "operational" {
+                            self.changeColor = true
+                        }
                         self.status.status.capitalizeFirstLetter()
                         self.array.append(self.status)
                     }
@@ -42,15 +42,12 @@ class StatusListViewModel: ObservableObject {
         }
         
         if self.array.isEmpty {
-            self.status.name = "No Internet"
+            self.status.name = "Loading"
             self.status.status = ""
             self.changeColor = false
             self.array.append(self.status)
-        } else {
-            
         }
     }
-    
     
 }
 

@@ -29,11 +29,9 @@ struct ContentView : View {
                         }
                         .padding(20)
 
-                        if status.name != "No Internet" {
                             Circle()
                                 .fill(self.statusList.changeColor ?  Color.red : Color.green)
                                 .frame(width: 15, height: 15)
-                        }
                     }
                     
                 }
