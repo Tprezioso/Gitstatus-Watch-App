@@ -14,15 +14,21 @@ class StatusListViewModel: ObservableObject {
     
     @Published var status = GitStatusObject(name: "", status: "")
     @Published var array = [GitStatusObject]()
-    @Published var changeColor = true
+    @Published var changeColor = false
+    @ObservedObject var isConnected = APICALL()
     var apiJSON = [[String : Any]]()
     
     func fetchStatus() {
         self.array = [GitStatusObject]()
         APICALL().summaryStatus { (json) in
-            if json!.isEmpty {
-                self.status.name = "No Internet"
-            } else {
+//            if json!.isEmpty {
+//                self.status.name = "No Internet"
+//            } else {
+            
+//             TODO: - Need to make a check here if there is no internet
+//            if self.isConnected.isConnectedtotheInternet {
+//
+//            }
                 self.apiJSON = json! as [[String : Any]]
                 for components in self.apiJSON {
                     if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
@@ -36,17 +42,17 @@ class StatusListViewModel: ObservableObject {
                         self.array.append(self.status)
                     }
                 }
-                self.array.remove(at: 0)
+//                self.array.remove(at: 0)
                 
-            }
+//            }
         }
         
-        if self.array.isEmpty {
-            self.status.name = "Loading"
-            self.status.status = ""
-            self.changeColor = false
-            self.array.append(self.status)
-        }
+//        if self.array.isEmpty {
+//            self.status.name = "Loading"
+//            self.status.status = ""
+//            self.changeColor = false
+//            self.array.append(self.status)
+//        }
     }
     
 }

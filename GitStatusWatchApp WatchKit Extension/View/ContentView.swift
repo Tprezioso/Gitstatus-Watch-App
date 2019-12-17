@@ -20,7 +20,7 @@ struct ContentView : View {
                 ForEach(statusList.array) { status in
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("\(status.name):" )
+                            Text("\(self.isConnected.isConnectedtotheInternet ? "No Internet" : status.name ):" )
                                 .fontWeight(.heavy)
                                 .multilineTextAlignment(.leading)
                             
@@ -33,9 +33,7 @@ struct ContentView : View {
                                 .fill(self.statusList.changeColor ?  Color.red : Color.green)
                                 .frame(width: 15, height: 15)
                     }
-                    
                 }
-                
             }
             .listStyle(CarouselListStyle())
             .navigationBarTitle(Text("GitHub Status"))
