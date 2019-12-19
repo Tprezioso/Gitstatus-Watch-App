@@ -8,15 +8,12 @@
 
 import Foundation
 import Alamofire
-import SwiftUI
-import Combine
 
 class APICALL: ObservableObject {
     let statusSummaryURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/summary.json"
     let incidentURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/incidents.json"
     let upcomingScheduledMaintenancesURL = "https://kctbh9vrtdwd.statuspage.io/api/v2/scheduled-maintenances/upcoming.json"
     
-    @Published var isConnectedtotheInternet = Bool()
     typealias WebServiceResponse = ([[String: Any]]?) -> Void
     
     func summaryStatus(completion: @escaping WebServiceResponse) {
@@ -29,7 +26,6 @@ class APICALL: ObservableObject {
             }
             if response.result.isFailure {
                 completion([["error":response.result.error!.localizedDescription]] as [[String: Any]])
-                self.isConnectedtotheInternet = false
                 print(response.result.error!.localizedDescription)
             }
         }

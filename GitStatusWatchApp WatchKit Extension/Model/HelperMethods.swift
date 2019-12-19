@@ -16,8 +16,6 @@ struct HelperMethods {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .none
-        //    dateFormatter.locale = Locale(identifier: "en_US") //uncomment if you don't want to get the system default format.
-        
         let dateObj: Date? = dateFormatterGet.date(from: date)
         
         return dateFormatter.string(from: dateObj!)

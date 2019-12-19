@@ -21,38 +21,20 @@ class StatusListViewModel: ObservableObject {
     func fetchStatus() {
         self.array = [GitStatusObject]()
         APICALL().summaryStatus { (json) in
-//            if json!.isEmpty {
-//                self.status.name = "No Internet"
-//            } else {
-            
-//             TODO: - Need to make a check here if there is no internet
-//            if self.isConnected.isConnectedtotheInternet {
-//
-//            }
-                self.apiJSON = json! as [[String : Any]]
-                for components in self.apiJSON {
-                    if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
-                        self.status = GitStatusObject(name: "", status: "")
-                        self.status.name = components["name"] as? String ?? "No Internet"
-                        self.status.status = components["status"] as! String
-                        if self.status.status != "operational" {
-                            self.changeColor = true
-                        }
-                        self.status.status.capitalizeFirstLetter()
-                        self.array.append(self.status)
+            self.apiJSON = json! as [[String : Any]]
+            for components in self.apiJSON {
+                if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
+                    self.status = GitStatusObject(name: "", status: "")
+                    self.status.name = components["name"] as? String ?? "No Internet"
+                    self.status.status = components["status"] as! String
+                    if self.status.status != "operational" {
+                        self.changeColor = true
                     }
+                    self.status.status.capitalizeFirstLetter()
+                    self.array.append(self.status)
                 }
-//                self.array.remove(at: 0)
-                
-//            }
+            }
         }
-        
-//        if self.array.isEmpty {
-//            self.status.name = "Loading"
-//            self.status.status = ""
-//            self.changeColor = false
-//            self.array.append(self.status)
-//        }
     }
     
 }

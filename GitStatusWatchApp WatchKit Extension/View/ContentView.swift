@@ -20,7 +20,7 @@ struct ContentView : View {
                 ForEach(statusList.array) { status in
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("\(self.isConnected.isConnectedtotheInternet ? "No Internet" : status.name ):" )
+                            Text("\(status.name):" )
                                 .fontWeight(.heavy)
                                 .multilineTextAlignment(.leading)
                             
@@ -28,10 +28,10 @@ struct ContentView : View {
                             Text(status.status)
                         }
                         .padding(20)
-
-                            Circle()
-                                .fill(self.statusList.changeColor ?  Color.red : Color.green)
-                                .frame(width: 15, height: 15)
+                        
+                        Circle()
+                            .fill(self.statusList.changeColor ?  Color.red : Color.green)
+                            .frame(width: 15, height: 15)
                     }
                 }
             }
@@ -39,8 +39,6 @@ struct ContentView : View {
             .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
                 self.statusList.fetchStatus()
-                print(self.isConnected.isConnectedtotheInternet)
-
             })
         }
     }
