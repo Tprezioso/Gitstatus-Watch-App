@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -135,10 +135,10 @@
 		391FF7C84370876A9BBBD45417B5CC00 /* Alamofire-library.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Alamofire-library.modulemap"; path = "../Alamofire-library/Alamofire-library.modulemap"; sourceTree = "<group>"; };
 		39D77EF1748803A19C64561F2C5EC1EA /* waitIndicatorGraphic-1@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-1@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-1@2x.png"; sourceTree = "<group>"; };
 		3B145B232C8F1CCD71985E7167F1B600 /* waitIndicatorGraphic-26@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-26@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-26@2x.png"; sourceTree = "<group>"; };
-		414DDA19B6D2A2F87E2B7B40726C90CB /* libPods-GitStatusWatchApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GitStatusWatchApp.a"; path = "libPods-GitStatusWatchApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		414DDA19B6D2A2F87E2B7B40726C90CB /* libPods-GitStatusWatchApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitStatusWatchApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41566F72740F7B62FB08DC2474DD603C /* waitIndicatorGraphic-2@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-2@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-2@2x.png"; sourceTree = "<group>"; };
 		4227C1AD1C6BF3F3ED93604C1CB4D3B3 /* waitIndicatorGraphic-23@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-23@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-23@2x.png"; sourceTree = "<group>"; };
-		4590A277869746F2C9D0C7042434AB4A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = "Alamofire-framework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4590A277869746F2C9D0C7042434AB4A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F732B7884F3564C8F3584467747F37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		46B59E949F69557234E67A56D882EA9A /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		46DA7C05571EE0124CD730A6F3AA2C59 /* Pods-GitStatusWatchApp WatchKit App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GitStatusWatchApp WatchKit App-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -150,14 +150,14 @@
 		5F527BA324D7565CFBE1ACA6384B22FD /* Pods-GitStatusWatchApp WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitStatusWatchApp WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		60CD29EF1B8624740EB97A7F9327FE7D /* Pods-GitStatusWatchApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GitStatusWatchApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		61352E38F5228403842F55F30C0CF807 /* waitIndicatorGraphic-10@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-10@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-10@2x.png"; sourceTree = "<group>"; };
-		66906390C1713A4C6ECC795F118CF65D /* libAlamofire-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libAlamofire-library.a"; path = "libAlamofire-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66906390C1713A4C6ECC795F118CF65D /* libAlamofire-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAlamofire-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		679BAE198DFE0DBDE4359258B3DDEB73 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		6D5089FB5A960E1788D0F00F0ED8C094 /* Alamofire-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-framework-umbrella.h"; sourceTree = "<group>"; };
 		6FE9D03FE95B3A9D04CDDEBB62290D30 /* waitIndicatorGraphic-14@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-14@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-14@2x.png"; sourceTree = "<group>"; };
 		71F0A432293EC09D3338F7A0A083E06C /* waitIndicatorGraphic-7@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-7@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-7@2x.png"; sourceTree = "<group>"; };
 		74AE4BE3EBC77A971BF0C0B764C5C2D3 /* Alamofire-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Alamofire-library-prefix.pch"; path = "../Alamofire-library/Alamofire-library-prefix.pch"; sourceTree = "<group>"; };
 		74B24222F4F2340A490532F2BFE39D96 /* waitIndicatorGraphic-19@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-19@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-19@2x.png"; sourceTree = "<group>"; };
-		75C8530982C5DB1F082BB7736586130A /* Pods_GitStatusWatchApp_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GitStatusWatchApp_WatchKit_Extension.framework; path = "Pods-GitStatusWatchApp WatchKit Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C8530982C5DB1F082BB7736586130A /* Pods_GitStatusWatchApp_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitStatusWatchApp_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7E4E53FF95EE5658A0D6F910B3E232 /* waitIndicatorGraphic-5@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-5@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-5@2x.png"; sourceTree = "<group>"; };
 		7C0B604AC92B2ADEA59FA46271A39BA5 /* waitIndicatorGraphic-13@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-13@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-13@2x.png"; sourceTree = "<group>"; };
 		7D16733C035319ED930B2A5AFEA08472 /* waitIndicatorGraphic-12@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-12@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-12@2x.png"; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		8A9A8473EFD83DDF27C2DB8E0571C405 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		8B2CF177FD3E66AD45A0304588636E3D /* waitIndicatorGraphic-18@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-18@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-18@2x.png"; sourceTree = "<group>"; };
 		8C69B6017C7C16D4548D527C049DC695 /* Alamofire-framework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Alamofire-framework.xcconfig"; sourceTree = "<group>"; };
-		8F654A62518446A1F0FAF541C119625D /* EMTLoadingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EMTLoadingIndicator.framework; path = EMTLoadingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F654A62518446A1F0FAF541C119625D /* EMTLoadingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EMTLoadingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		903083775DDBA759F73E036D770CA918 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		9271FC604A310C502DDEB9483FB8FD35 /* Pods-GitStatusWatchApp WatchKit App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GitStatusWatchApp WatchKit App.modulemap"; sourceTree = "<group>"; };
 		941B570906B1FB947859C65C37FBE4CF /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		9B27E9F308437052F4BDD1E7A41BAA0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C9478972AA00B4602E7888F48D87B81 /* waitIndicatorGraphic-11@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-11@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-11@2x.png"; sourceTree = "<group>"; };
 		9D75AF1EC360FE7D14003B4DA1D9EB40 /* Alamofire-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-framework-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FC6267904EDDE30241ECF9E3D18E7D1 /* Pods-GitStatusWatchApp WatchKit Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GitStatusWatchApp WatchKit Extension-dummy.m"; sourceTree = "<group>"; };
 		9FD633B35437DCCBBADB88AD52AAB5A3 /* waitIndicatorGraphic-21@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-21@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-21@2x.png"; sourceTree = "<group>"; };
 		A02E5CD4CC18D349B2800D548F9EF91A /* EMTTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EMTTimer.swift; path = EMTLoadingIndicator/Classes/EMTTimer.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 		D8C364E4C8B66B231D55E7DF66A220DC /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		DA8718D4A1682CD1676311DD67632A2C /* Alamofire-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Alamofire-framework.modulemap"; sourceTree = "<group>"; };
 		DF3C2680716D4676446874ACDCCDB46E /* EMTLoadingIndicator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EMTLoadingIndicator.modulemap; sourceTree = "<group>"; };
-		E41A9A02FF08CBD4492C372F9CC3C93F /* libPods-GitStatusWatchApp WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GitStatusWatchApp WatchKit App.a"; path = "libPods-GitStatusWatchApp WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E41A9A02FF08CBD4492C372F9CC3C93F /* libPods-GitStatusWatchApp WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitStatusWatchApp WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F48FDFF37F5BED571624BA23AD5B24BD /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.0.sdk/System/Library/Frameworks/WatchKit.framework; sourceTree = DEVELOPER_DIR; };
 		F7035D9A347A3E30349F781DFAE0881A /* waitIndicatorGraphic-29@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-29@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-29@2x.png"; sourceTree = "<group>"; };
 		F8138F695E336866A1B7091EAF286554 /* waitIndicatorGraphic-4@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "waitIndicatorGraphic-4@2x.png"; path = "EMTLoadingIndicator/Resources/waitIndicatorGraphic-4@2x.png"; sourceTree = "<group>"; };
@@ -274,7 +274,6 @@
 				4AB380C1F7C245873DFD0B243A779F9B /* Resources */,
 				F58CFD7D27CBFF38AF99264ED2CB8B69 /* Support Files */,
 			);
-			name = EMTLoadingIndicator;
 			path = EMTLoadingIndicator;
 			sourceTree = "<group>";
 		};
@@ -435,7 +434,6 @@
 				C47B1C4521B2705635A8A2F68333EA25 /* Validation.swift */,
 				9D11B0B52CEBB83898BEA59A055BAFB7 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -649,14 +647,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1130;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 2CD3BF726F82BFCEB14739AC9DDC5DFF /* Products */;
@@ -867,6 +866,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -967,11 +967,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GitStatusWatchApp WatchKit Extension/Pods-GitStatusWatchApp WatchKit Extension-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GitStatusWatchApp WatchKit Extension/Pods-GitStatusWatchApp WatchKit Extension.modulemap";
 				OTHER_LDFLAGS = "";
@@ -992,6 +988,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1041,8 +1038,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
@@ -1111,11 +1107,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GitStatusWatchApp WatchKit Extension/Pods-GitStatusWatchApp WatchKit Extension-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GitStatusWatchApp WatchKit Extension/Pods-GitStatusWatchApp WatchKit Extension.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1150,11 +1142,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-framework/Alamofire-framework-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire-framework/Alamofire-framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire-framework/Alamofire-framework.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -1234,11 +1222,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/EMTLoadingIndicator/EMTLoadingIndicator-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/EMTLoadingIndicator/EMTLoadingIndicator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EMTLoadingIndicator/EMTLoadingIndicator.modulemap";
 				PRODUCT_MODULE_NAME = EMTLoadingIndicator;
 				PRODUCT_NAME = EMTLoadingIndicator;
@@ -1271,11 +1255,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/EMTLoadingIndicator/EMTLoadingIndicator-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/EMTLoadingIndicator/EMTLoadingIndicator-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/EMTLoadingIndicator/EMTLoadingIndicator.modulemap";
 				PRODUCT_MODULE_NAME = EMTLoadingIndicator;
 				PRODUCT_NAME = EMTLoadingIndicator;
@@ -1329,11 +1309,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire-framework/Alamofire-framework-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire-framework/Alamofire-framework-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire-framework/Alamofire-framework.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
