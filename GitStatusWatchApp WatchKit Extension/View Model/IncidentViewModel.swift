@@ -28,7 +28,6 @@ class IncidentViewModel: ObservableObject {
             self.incident.impact.capitalizeFirstLetter()
             if let detailArray = self.apiJSON[0]["incident_updates"] as? [[String:Any]] {
                 self.incident.body = detailArray[0]["body"] as! String
-                print(detailArray[0]["body"]!)
             }
             
             self.array.append(self.incident)

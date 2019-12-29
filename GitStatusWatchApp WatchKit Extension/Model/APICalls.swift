@@ -51,7 +51,6 @@ class APICALL: ObservableObject {
                 let maintaenancesData = response.result.value! as! [String: AnyObject]
                 if let componentsData = maintaenancesData["scheduled_maintenances"] as? [[String : Any]] {
                     completion(componentsData)
-                    print(componentsData)
                 }
             }
             if response.result.isFailure{

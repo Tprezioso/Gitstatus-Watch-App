@@ -33,7 +33,6 @@ class MaintenancesViewModel: ObservableObject {
                 self.scheduledMaintenance.status.capitalizeFirstLetter()
                 if let detailArray = self.apiJSON[0]["incident_updates"] as? [[String:Any]] {
                     self.scheduledMaintenance.body = detailArray[0]["body"] as? String ?? ""
-                    print(detailArray[0]["body"]!)
                 }
                 
                 self.array.append(self.scheduledMaintenance)
