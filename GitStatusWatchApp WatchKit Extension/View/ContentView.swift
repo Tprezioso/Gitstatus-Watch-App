@@ -30,7 +30,7 @@ struct ContentView : View {
                         .padding(20)
                         
                         Circle()
-                            .fill(self.statusList.changeColor ?  Color.green : Color.red)
+                            .fill(self.statusList.changeColor ? Color.red : Color.green)
                             .frame(width: 15, height: 15)
                     }
                 }
