@@ -31,6 +31,13 @@ extension String {
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }
+
+    func replaceUnderscoreWithSpace() -> String {
+        return replacingOccurrences(of: "_", with: " ")
+    }
+    mutating func replaceUnderscore() {
+        self = self.replaceUnderscoreWithSpace()
+    }
 }
 
 

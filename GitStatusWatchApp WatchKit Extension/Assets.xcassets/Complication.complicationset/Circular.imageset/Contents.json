@@ -1,28 +1,32 @@
 {
   "images" : [
     {
+      "filename" : "gitStatusWatchAppIcon_32x32.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : "<=145"
     },
     {
+      "filename" : "gitStatusWatchAppIcon_1_36x36.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">161"
     },
     {
+      "filename" : "gitStatusWatchAppIcon_1_36x36-1.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">145"
     },
     {
+      "filename" : "gitStatusWatchAppIcon_2_40x40.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

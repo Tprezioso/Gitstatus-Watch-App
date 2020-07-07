@@ -19,22 +19,27 @@ class StatusListViewModel: ObservableObject {
     var apiJSON = [[String : Any]]()
     
     func fetchStatus() {
-        self.array = [GitStatusObject]()
-        APICALL().summaryStatus { (json) in
-            self.apiJSON = json! as [[String : Any]]
-            for components in self.apiJSON {
-                if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
-                    self.status = GitStatusObject(name: "", status: "")
-                    self.status.name = components["name"] as? String ?? "No Internet"
-                    self.status.status = components["status"] as! String
-                    if self.status.status != "operational" {
-                        self.changeColor = true
+        DispatchQueue.main.async {
+            self.array = [GitStatusObject]()
+            APICALL().summaryStatus { (json) in
+                self.apiJSON = json! as [[String : Any]]
+                for components in self.apiJSON {
+                    if components["name"] as! String != "Visit www.githubstatus.com for more information" && components["name"] as! String != "" {
+                        self.status = GitStatusObject(name: "", status: "")
+                        self.status.name = components["name"] as? String ?? "No Internet"
+                        self.status.status = components["status"] as! String
+                        if self.status.status == "partial_outage" {
+                            self.changeColor = true
+                        }
+                        self.status.status.capitalizeFirstLetter()
+                        self.status.status.replaceUnderscore()
+                        self.array.append(self.status)
                     }
-                    self.status.status.capitalizeFirstLetter()
-                    self.array.append(self.status)
                 }
-            }
+            }           
         }
+
+
     }
     
 }

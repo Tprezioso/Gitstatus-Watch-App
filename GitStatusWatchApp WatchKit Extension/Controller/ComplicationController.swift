@@ -33,6 +33,19 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
+        #warning("Need to implement complications!!!")
+       // TODO: - Mark for all complication sizes that you want to show
+        
+        let date = Date()
+            
+        if complication.family == .circularSmall {
+            let template = CLKComplicationTemplateCircularSmallRingImage()
+            template.imageProvider =  CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!)
+            let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
+            handler(entry)
+        }
+        
+        
         handler(nil)
     }
     
