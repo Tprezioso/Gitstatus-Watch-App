@@ -33,20 +33,46 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
-        #warning("Need to implement complications!!!")
-       // TODO: - Mark for all complication sizes that you want to show
-        
-        let date = Date()
-            
+
         if complication.family == .circularSmall {
             let template = CLKComplicationTemplateCircularSmallRingImage()
-            template.imageProvider =  CLKImageProvider(onePieceImage: UIImage(named: "Complication/Circular")!)
-            let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
-            handler(entry)
+            guard let image = UIImage(named: "Complication/Circular") else { handler(nil); return}
+            template.imageProvider = CLKImageProvider(onePieceImage: image)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            handler(timelineEntry)
+            
+        } else if complication.family == .utilitarianSmall {
+            let template = CLKComplicationTemplateUtilitarianSmallRingImage()
+            guard let image = UIImage(named: "Complication/Utilitarian") else { handler(nil); return}
+            template.imageProvider = CLKImageProvider(onePieceImage: image)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            handler(timelineEntry)
+            
+        } else if complication.family == .modularSmall {
+            let template = CLKComplicationTemplateModularSmallRingImage()
+            guard let image = UIImage(named: "Complication/Modular") else { handler(nil); return}
+            template.imageProvider = CLKImageProvider(onePieceImage: image)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            handler(timelineEntry)
+            
+        } else if complication.family == .graphicCircular {
+            let template = CLKComplicationTemplateGraphicCircularImage()
+            guard let image = UIImage(named: "Complication/GraphicCircular") else { handler(nil); return}
+            template.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            handler(timelineEntry)
+            
+        } else if complication.family == .graphicCorner {
+            let template = CLKComplicationTemplateGraphicCornerCircularImage()
+            guard let image = UIImage(named: "GraphicCorner") else { handler(nil); return}
+            template.imageProvider = CLKFullColorImageProvider(fullColorImage: image)
+            let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            handler(timelineEntry)
+
+        } else {
+            handler(nil)
         }
-        
-        
-        handler(nil)
+
     }
     
     func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
