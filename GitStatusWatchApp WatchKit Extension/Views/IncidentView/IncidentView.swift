@@ -9,45 +9,45 @@
 import SwiftUI
 
 struct IncidentView: View {
-    @ObservedObject var incidentList = IncidentViewModel()
+    @StateObject var viewModel = IncidentViewModel()
     
     var body: some View {
-        ScrollView() {
-            VStack (alignment: .leading, spacing: 8) {
-                Text("Last Incident")
-                    .font(.title)
-                if incidentList.incident.name.isEmpty {
-                    Text("No Internet Connection")
+        List {
+            VStack (alignment: .leading, spacing: 4) {
+                VStack(spacing: 4) {
+                    Text("Last Incident")
+                        .font(.title3)
+                        .bold()
+                    Text(viewModel.incident.dateCreated)
                         .font(.headline)
-                }
-                Text(incidentList.incident.dateCreated)
-                Spacer()
-                Text(incidentList.incident.name)
+                    Divider()
+                }.lineLimit(nil)
+                .padding()
+                
+                Text(viewModel.incident.name)
                     .font(.headline)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(nil)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .bold()
                 Spacer()
                 HStack {
-                    Text("Impact:")
+                    Text("Impact: ")
                         .font(.headline)
-                    Text(incidentList.incident.impact)
+                        .bold()
+                        +
+                        Text(viewModel.incident.impact)
                 }
-                Text("Status:")
-                    .font(.headline)
-                Text(incidentList.incident.body)
-                    .lineLimit(nil)
-                    .fixedSize(horizontal: false, vertical: true)
+                HStack {
+                    Text("Status: ")
+                        .font(.headline)
+                        .bold()
+                        +
+                        Text(viewModel.incident.body)
+                }
             }
-                // this frame layout was used to have same spacing as a button
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-                .padding()
-            
+            .padding()
         }
-            
-        .onAppear(perform: {
-            self.incidentList.fetchStatus()
-        })
+        .onAppear {
+            self.viewModel.fetchStatus()
+        }
     }
 }
 
