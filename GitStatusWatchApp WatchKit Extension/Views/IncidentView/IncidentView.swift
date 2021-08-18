@@ -21,7 +21,8 @@ struct IncidentView: View {
                     Text(viewModel.incident.dateCreated)
                         .font(.headline)
                     Divider()
-                }.lineLimit(nil)
+                }
+                .lineLimit(nil)
                 .padding()
                 
                 Text(viewModel.incident.name)
