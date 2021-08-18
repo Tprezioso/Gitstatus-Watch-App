@@ -15,7 +15,6 @@ class StatusListViewModel: ObservableObject {
     @Published var status = GitStatusObject(name: "", status: "")
     @Published var array = [GitStatusObject]()
     @Published var changeColor = false
-    @ObservedObject var isConnected = APICALL()
     var apiJSON = [[String : Any]]()
     
     func fetchStatus() {
@@ -38,8 +37,6 @@ class StatusListViewModel: ObservableObject {
                 }
             }           
         }
-
-
     }
     
 }

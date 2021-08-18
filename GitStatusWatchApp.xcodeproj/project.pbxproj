@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		518495BDFD5C0DAE0885E1E9 /* libPods-GitStatusWatchApp WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7392C03438C19D069DC7403B /* libPods-GitStatusWatchApp WatchKit App.a */; };
+		55911A6D26CC8CFE00B67D14 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55911A6C26CC8CFE00B67D14 /* NotificationView.swift */; };
 		9F0B3E9D232083A200C4DE0B /* GitStatusWatchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9F0B3E9C232083A200C4DE0B /* GitStatusWatchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9F0B3EA3232083A200C4DE0B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B3EA1232083A200C4DE0B /* Interface.storyboard */; };
 		9F0B3EA5232083A400C4DE0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B3EA4232083A400C4DE0B /* Assets.xcassets */; };
 		9F0B3EAC232083A400C4DE0B /* GitStatusWatchApp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9F0B3EAB232083A400C4DE0B /* GitStatusWatchApp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9F0B3EB1232083A400C4DE0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3EB0232083A400C4DE0B /* ContentView.swift */; };
+		9F0B3EB1232083A400C4DE0B /* StatusListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3EB0232083A400C4DE0B /* StatusListView.swift */; };
 		9F0B3EB3232083A400C4DE0B /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3EB2232083A400C4DE0B /* HostingController.swift */; };
 		9F0B3EB5232083A400C4DE0B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3EB4232083A400C4DE0B /* ExtensionDelegate.swift */; };
 		9F0B3EB7232083A400C4DE0B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3EB6232083A400C4DE0B /* NotificationController.swift */; };
-		9F0B3EB9232083A400C4DE0B /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3EB8232083A400C4DE0B /* NotificationView.swift */; };
 		9F0B3EBB232083A400C4DE0B /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3EBA232083A400C4DE0B /* ComplicationController.swift */; };
 		9F0B3EBD232083A500C4DE0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B3EBC232083A500C4DE0B /* Assets.xcassets */; };
 		9F0B3EC0232083A500C4DE0B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B3EBF232083A500C4DE0B /* Preview Assets.xcassets */; };
@@ -24,9 +24,6 @@
 		9F0B3ED623245D5C00C4DE0B /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B3ED523245D5C00C4DE0B /* APICalls.swift */; };
 		9F27512D237E1B0800BE06E0 /* GitIncidentsObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27512C237E1B0800BE06E0 /* GitIncidentsObject.swift */; };
 		9F27512F237E236B00BE06E0 /* IncidentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27512E237E236B00BE06E0 /* IncidentViewModel.swift */; };
-		9F2751352387497D00BE06E0 /* UpcomingMaintenancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2751342387497D00BE06E0 /* UpcomingMaintenancesView.swift */; };
-		9F275137238749B400BE06E0 /* MaintenancesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F275136238749B400BE06E0 /* MaintenancesViewModel.swift */; };
-		9F27513923874A3000BE06E0 /* MaintenanceObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27513823874A3000BE06E0 /* MaintenanceObject.swift */; };
 		9F27513B23874BAB00BE06E0 /* HelperMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27513A23874BAB00BE06E0 /* HelperMethods.swift */; };
 		9F3E7CE0233D83B200CE8FA6 /* StatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3E7CDF233D83B200CE8FA6 /* StatusListViewModel.swift */; };
 		9F4C7620237B0765004DB6A1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4C761F237B0765004DB6A1 /* HomeView.swift */; };
@@ -81,6 +78,7 @@
 		2B70F7BFA4336EC51412F5E7 /* Pods_GitStatusWatchApp_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitStatusWatchApp_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41625304FBB6F581C6282BB8 /* Pods-GitStatusWatchApp WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusWatchApp WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-GitStatusWatchApp WatchKit Extension/Pods-GitStatusWatchApp WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		52BEBF9960707A120143DB52 /* libPods-GitStatusWatchApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitStatusWatchApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55911A6C26CC8CFE00B67D14 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		660FD85324623DBE8E780C70 /* Pods-GitStatusWatchApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusWatchApp.release.xcconfig"; path = "Target Support Files/Pods-GitStatusWatchApp/Pods-GitStatusWatchApp.release.xcconfig"; sourceTree = "<group>"; };
 		70F9D1C4C28AB388B5B7AD4E /* Pods-GitStatusWatchApp WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitStatusWatchApp WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-GitStatusWatchApp WatchKit Extension/Pods-GitStatusWatchApp WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		7392C03438C19D069DC7403B /* libPods-GitStatusWatchApp WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitStatusWatchApp WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,11 +89,10 @@
 		9F0B3EA4232083A400C4DE0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F0B3EA6232083A400C4DE0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F0B3EAB232083A400C4DE0B /* GitStatusWatchApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GitStatusWatchApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F0B3EB0232083A400C4DE0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F0B3EB0232083A400C4DE0B /* StatusListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusListView.swift; sourceTree = "<group>"; };
 		9F0B3EB2232083A400C4DE0B /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		9F0B3EB4232083A400C4DE0B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9F0B3EB6232083A400C4DE0B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		9F0B3EB8232083A400C4DE0B /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		9F0B3EBA232083A400C4DE0B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		9F0B3EBC232083A500C4DE0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F0B3EBF232083A500C4DE0B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -105,9 +102,6 @@
 		9F0B3ED523245D5C00C4DE0B /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
 		9F27512C237E1B0800BE06E0 /* GitIncidentsObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitIncidentsObject.swift; sourceTree = "<group>"; };
 		9F27512E237E236B00BE06E0 /* IncidentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentViewModel.swift; sourceTree = "<group>"; };
-		9F2751342387497D00BE06E0 /* UpcomingMaintenancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMaintenancesView.swift; sourceTree = "<group>"; };
-		9F275136238749B400BE06E0 /* MaintenancesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenancesViewModel.swift; sourceTree = "<group>"; };
-		9F27513823874A3000BE06E0 /* MaintenanceObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintenanceObject.swift; sourceTree = "<group>"; };
 		9F27513A23874BAB00BE06E0 /* HelperMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperMethods.swift; sourceTree = "<group>"; };
 		9F3E7CDF233D83B200CE8FA6 /* StatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusListViewModel.swift; sourceTree = "<group>"; };
 		9F4C761F237B0765004DB6A1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -154,6 +148,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		55911A6E26CC8F5600B67D14 /* StatusListView */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B3EB0232083A400C4DE0B /* StatusListView.swift */,
+				9F3E7CDF233D83B200CE8FA6 /* StatusListViewModel.swift */,
+			);
+			path = StatusListView;
+			sourceTree = "<group>";
+		};
+		55911A6F26CC8F6900B67D14 /* IncidentView */ = {
+			isa = PBXGroup;
+			children = (
+				9F4C7621237B3673004DB6A1 /* IncidentView.swift */,
+				9F27512E237E236B00BE06E0 /* IncidentViewModel.swift */,
+			);
+			path = IncidentView;
+			sourceTree = "<group>";
+		};
 		9F0B3E91232083A200C4DE0B = {
 			isa = PBXGroup;
 			children = (
@@ -189,10 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				9F0B3EB4232083A400C4DE0B /* ExtensionDelegate.swift */,
-				9F3E7CDE233D838800CE8FA6 /* View Model */,
-				9F0B3ED22323152200C4DE0B /* Model */,
-				9F0B3ED32323153900C4DE0B /* View */,
+				9F0B3ED32323153900C4DE0B /* Views */,
 				9F0B3ED42323154D00C4DE0B /* Controller */,
+				9F0B3ED22323152200C4DE0B /* Model */,
 				9F0B3EBC232083A500C4DE0B /* Assets.xcassets */,
 				9F0B3EC1232083A500C4DE0B /* Info.plist */,
 				9F0B3EC2232083A500C4DE0B /* PushNotificationPayload.apns */,
@@ -214,23 +225,21 @@
 			children = (
 				9F0B3ED02323151600C4DE0B /* GitStatusObject.swift */,
 				9F27512C237E1B0800BE06E0 /* GitIncidentsObject.swift */,
-				9F27513823874A3000BE06E0 /* MaintenanceObject.swift */,
 				9F0B3ED523245D5C00C4DE0B /* APICalls.swift */,
 				9F27513A23874BAB00BE06E0 /* HelperMethods.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9F0B3ED32323153900C4DE0B /* View */ = {
+		9F0B3ED32323153900C4DE0B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9F4C761F237B0765004DB6A1 /* HomeView.swift */,
-				9F0B3EB0232083A400C4DE0B /* ContentView.swift */,
-				9F4C7621237B3673004DB6A1 /* IncidentView.swift */,
-				9F2751342387497D00BE06E0 /* UpcomingMaintenancesView.swift */,
-				9F0B3EB8232083A400C4DE0B /* NotificationView.swift */,
+				55911A6E26CC8F5600B67D14 /* StatusListView */,
+				55911A6F26CC8F6900B67D14 /* IncidentView */,
+				55911A6C26CC8CFE00B67D14 /* NotificationView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9F0B3ED42323154D00C4DE0B /* Controller */ = {
@@ -241,16 +250,6 @@
 				9F0B3EBA232083A400C4DE0B /* ComplicationController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		9F3E7CDE233D838800CE8FA6 /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				9F3E7CDF233D83B200CE8FA6 /* StatusListViewModel.swift */,
-				9F27512E237E236B00BE06E0 /* IncidentViewModel.swift */,
-				9F275136238749B400BE06E0 /* MaintenancesViewModel.swift */,
-			);
-			path = "View Model";
 			sourceTree = "<group>";
 		};
 		C1F3DA730DAE27231D2300E5 /* Pods */ = {
@@ -498,17 +497,14 @@
 				9F0B3ED623245D5C00C4DE0B /* APICalls.swift in Sources */,
 				9F27512D237E1B0800BE06E0 /* GitIncidentsObject.swift in Sources */,
 				9F4C7620237B0765004DB6A1 /* HomeView.swift in Sources */,
-				9F0B3EB1232083A400C4DE0B /* ContentView.swift in Sources */,
+				9F0B3EB1232083A400C4DE0B /* StatusListView.swift in Sources */,
 				9F27512F237E236B00BE06E0 /* IncidentViewModel.swift in Sources */,
 				9F27513B23874BAB00BE06E0 /* HelperMethods.swift in Sources */,
 				9F0B3EB7232083A400C4DE0B /* NotificationController.swift in Sources */,
+				55911A6D26CC8CFE00B67D14 /* NotificationView.swift in Sources */,
 				9F3E7CE0233D83B200CE8FA6 /* StatusListViewModel.swift in Sources */,
 				9F0B3EB5232083A400C4DE0B /* ExtensionDelegate.swift in Sources */,
-				9F0B3EB9232083A400C4DE0B /* NotificationView.swift in Sources */,
 				9F0B3EBB232083A400C4DE0B /* ComplicationController.swift in Sources */,
-				9F27513923874A3000BE06E0 /* MaintenanceObject.swift in Sources */,
-				9F2751352387497D00BE06E0 /* UpcomingMaintenancesView.swift in Sources */,
-				9F275137238749B400BE06E0 /* MaintenancesViewModel.swift in Sources */,
 				9F4C7622237B3673004DB6A1 /* IncidentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,7 +671,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Debug;
 		};
@@ -702,7 +698,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Release;
 		};
@@ -724,7 +720,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Debug;
 		};
@@ -746,7 +742,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Release;
 		};

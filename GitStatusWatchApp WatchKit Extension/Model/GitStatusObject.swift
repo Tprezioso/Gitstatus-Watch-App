@@ -9,7 +9,7 @@
 import Foundation
 
 struct GitStatusObject:Identifiable, Decodable {
-    let id = UUID()
+    var id = UUID()
     var name: String
     var status: String
 

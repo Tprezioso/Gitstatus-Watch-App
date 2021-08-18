@@ -10,17 +10,19 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            NavigationLink(destination: ContentView()) {
+        List {
+            NavigationLink(destination: StatusListView()) {
                 Text("Status")
+                    .fontWeight(.heavy)
+                    .multilineTextAlignment(.leading)
             }
             NavigationLink(destination: IncidentView()) {
                 Text("Last Incident")
-            }
-            NavigationLink(destination: UpcomingMaintenancesView()) {
-                Text("Schedule Maintenance")
+                    .fontWeight(.heavy)
+                    .multilineTextAlignment(.leading)
             }
         }
+        
         .navigationBarTitle(Text("GitHub Status"))
     }
     

@@ -8,46 +8,40 @@
 
 import SwiftUI
 import UIKit
-import EMTLoadingIndicator
 
-struct ContentView : View {
-    @ObservedObject var statusList = StatusListViewModel()
-    @ObservedObject var isConnected = APICALL()
+struct StatusListView : View {
+    @StateObject var viewModel = StatusListViewModel()
     
     var body: some View {
         ZStack {
             List {
-                ForEach(statusList.array) { status in
+                ForEach(viewModel.array) { status in
                     HStack {
                         VStack(alignment: .leading) {
                             Text("\(status.name):" )
                                 .fontWeight(.heavy)
                                 .multilineTextAlignment(.leading)
-                            
                             Spacer()
                             Text(status.status)
+                                .foregroundColor( status.status == "Operational" ? Color.green : Color.pink)
                         }
-                        .padding(20)
                         
-//                        Circle()
-//                            .fill(self.statusList.changeColor ? Color.red : Color.green)
-//                            .frame(width: 15, height: 15)
                     }
                 }
             }
-            .listStyle(CarouselListStyle())
+            .listStyle(PlainListStyle())
             .navigationBarTitle(Text("GitHub Status"))
             .onAppear(perform: {
-                self.statusList.fetchStatus()
+                self.viewModel.fetchStatus()
             })
         }
     }
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct StatusListView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        StatusListView()
     }
 }
 #endif

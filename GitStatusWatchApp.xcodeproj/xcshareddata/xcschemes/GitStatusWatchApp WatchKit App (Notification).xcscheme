@@ -56,10 +56,8 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "GitStatusWatchApp WatchKit Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/GitStatusWatchApp WatchKit App">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9F0B3E9B232083A200C4DE0B"
@@ -67,7 +65,7 @@
             BlueprintName = "GitStatusWatchApp WatchKit App"
             ReferencedContainer = "container:GitStatusWatchApp.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -77,10 +75,8 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "GitStatusWatchApp WatchKit Extension/PushNotificationPayload.apns">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/GitStatusWatchApp WatchKit App">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9F0B3E9B232083A200C4DE0B"
@@ -88,16 +84,7 @@
             BlueprintName = "GitStatusWatchApp WatchKit App"
             ReferencedContainer = "container:GitStatusWatchApp.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9F0B3E9B232083A200C4DE0B"
-            BuildableName = "GitStatusWatchApp WatchKit App.app"
-            BlueprintName = "GitStatusWatchApp WatchKit App"
-            ReferencedContainer = "container:GitStatusWatchApp.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
